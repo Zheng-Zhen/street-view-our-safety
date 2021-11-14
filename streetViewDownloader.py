@@ -38,7 +38,9 @@ def downloadImage(lon,lat):
     imageCropIdList = [[1,0],[0,1],[0,2],[0,3]]
     imageCropList = []
     for imageCropId in imageCropIdList:
-        imageCropUrl = imageUrl.replace("{subdomain}","t0")                               .replace("{faceId}",f"{imageCropId[0]}")                               .replace("{tileId}",f"{imageCropId[1]}")
+        imageCropUrl = imageUrl.replace("{subdomain}","t0")\
+            .replace("{faceId}",f"{imageCropId[0]}")\
+            .replace("{tileId}",f"{imageCropId[1]}")
         h = requests.get(imageCropUrl)
         imageCropList.append(Image.open(BytesIO(h.content)))
 
