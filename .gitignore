@@ -3,6 +3,6 @@ gis
 .ipynb_checkpoints/
 __pycache__/
 
-downloadedImages/
+downloadedImages
 downloadedImages.zip
-
+segnet-output

@@ -28,11 +28,11 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. At least one of the datasets contains more than 1,000,000 rows.
 
-1. It combines data collected from 3 or more different sources.
+1. ✅ It combines data collected from 3 or more different sources.
 
 1. The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
-1. You use one of the analysis techniques for urban street networks (e.g., osmnx, pandana), clustering (e.g., scikit-learn), or raster datasets.
+1. ✅ You use one of the analysis techniques for urban street networks (e.g., osmnx, pandana), clustering (e.g., scikit-learn), or raster datasets.
 
 1. You perform a machine learning analysis with scikit-learn as part of the analysis.
 
