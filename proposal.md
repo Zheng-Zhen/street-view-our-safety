@@ -26,6 +26,19 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. ✅ Data is collected through a means more sophisticated than downloading (e.g. scraping, API).
 
+    The Bing StreetView is collected by [Bing Developer Api](https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api). This part of codes can be found [here](./data/streetview/streetViewDownloader.ipynb)
+
+    ```python
+    def downloadImage(lon,lat):
+        point = [f"{lon:.5f}" ,f"{lat:.5f}"]
+
+        # request metadata Api
+        url = apiEndpoint.replace("LAT",point[1]).replace("LON",point[0])
+        h = requests.get(url)
+        responseJson = h.json()
+        ...    
+    ```
+
 1. At least one of the datasets contains more than 1,000,000 rows.
 
 1. ✅ It combines data collected from 3 or more different sources.
