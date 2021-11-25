@@ -1,0 +1,11 @@
+.web-title {
+    padding-top: 75vh;
+    color: white;
+    font-size: 30pt;
+}
+
+.web-bg {
+    background-image: url("../data/titlePage.jpg");
+    background-position: center;
+    background-size: cover;
+}
