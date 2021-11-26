@@ -19,41 +19,90 @@
 <body>
     <!-- front page -->
     <div class="web-bg vh-100 d-flex">
-        <h1 class="web-title d-flex align-items-center w-100 text-center justify-content-around">How does streets affect
+        <h1 class="web-title d-flex align-items-center w-100 justify-content-around shadow">How does streets affect
             our safety?</h1>
     </div>
 
     <!-- second page -->
-    <div class="page vh-100">
-        <div class="vh-100" id="map01">
+    <div class="page row vh-100 m-0">
+        <div class="col-8 h-100" id="map01">
 
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">1</span> Street Views</h1>
+                <h2>Why street views?</h2>
+                <p>Street view images represent real-world scenery from a pedestrian perspective. By analyzing the
+                    elements
+                    in street view images, the urban built-environment can be better modelled. <sup>
+                        <a
+                            href="https://senseable.mit.edu/papers/pdf/20200801_Kang-etal_ReviewUrbanPhysical_AnnalsGIS.pdf">1</a>
+                    </sup>
+
+                </p>
+                <h2>How did we collect the images?</h2>
+                <p>Given the streets class by <a
+                        href="https://www.opendataphilly.org/dataset/street-centerlines">OpenDataPhilly</a>,
+                    streets' class lower than minor arterial are not considered to exclude local pathes did we barely
+                    have
+                    street view images. Then, a set of points is selected from the streets with a distance of
+                    100m(328ft). And street view images are collected according to these points throuth <a
+                        href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api">Bing
+                        Map Api</a>. </p>
+                <h2>How did we collect the elements in these images?</h2>
+                <p>An Image Segmentation method <a href="">SegNet</a> is used to analyzing the elements and their
+                    proportion in the images. The elements in the images are devided into different classes, like trees,
+                    roads, cars or sidewalks.</p>
+            </div>
         </div>
     </div>
 
     <!-- third page -->
-    <div class="page vh-100">
+    <div class="page row vh-100 m-0">
+        <div class="col-8 h-100" id="map02">
 
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">2</span> Street Views</h1>
+            </div>
+        </div>
     </div>
     <!-- fourth page -->
-    <div class="page vh-100">
+    <div class="page row vh-100 m-0">
+        <div class="col-8 h-100" id="map03">
 
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">3</span> Street Views</h1>
+            </div>
+        </div>
     </div>
     <!-- fifth page -->
-    <div class="page vh-100">
+    <div class="page row vh-100 m-0">
+        <div class="col-8 h-100" id="map04">
 
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">4</span> Street Views</h1>
+            </div>
+        </div>
     </div>
     <!-- sixth page -->
-    <div class="page vh-100">
+    <div class="page row vh-100 m-0">
+        <div class="col-8 h-100" id="map05">
 
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">5</span> Street Views</h1>
+            </div>
+        </div>
     </div>
     <!-- seventh page -->
-    <div class="page vh-100">
-
-    </div>
     <!-- eigith page -->
-    <div class="page vh-100">
-
-    </div>
 
     <!-- bottom -->
 

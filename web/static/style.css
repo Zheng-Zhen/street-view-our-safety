@@ -1,11 +1,22 @@
+:root{
+    --bs-body-color: #443333;
+}
 .web-title {
-    padding-top: 75vh;
+    padding-top: 65vh;
     color: white;
-    font-size: 30pt;
+    font-size: 50pt;
+    text-shadow: 0px 0px 13px #00000099;
 }
 
 .web-bg {
     background-image: url("../data/titlePage.jpg");
     background-position: center;
     background-size: cover;
+}
+
+.page{
+    padding: 20pt;
+}
+.text-container{
+    padding-left: 20pt;
 }
