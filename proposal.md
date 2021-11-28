@@ -5,20 +5,37 @@ Submit a short (1/2 to 1 page) proposal that outlines and describe your plan for
 
 The data set(s) you wish to use in the project.
 
-| dataset          | description                      | source |
-| ---------------- | -------------------------------- | ------ |
-| Bing Street View | 12000+ street view pic from Bing |        |
-| Street           | Street center line               |        |
-| ACS?             |                                  |        |
-| ...              |                                  |        |
+| dataset          | description                             | source         |
+| ---------------- | --------------------------------------- | -------------- |
+| Bing Street View | 12000+ street view pic from Bing (2015) |                |
+| Street           | Street center line                      |                |
+| ACS              |                                         | census bureau  |
+| 311 complaint    | Complaints about street quality         | opendataphilly |
+| ...              |                                         |                |
 
 ## Question
 
 The questions that you want to explore.
 
+**How does streets affect our safety and equity?** 
+
+
+
 ## Method
 
 The analysis methods and techniques that you will use.
+
+**1. Picture analysis to disassemble street quality in Philly, added with exotic 311 complaint dataset **
+
+**2. Use the above outcome to see what is the relationship between race and street quality, whether it achieves racial equity**
+
+**3. Use the above outcome to see what is the relationship between crime and street quality, how dose the street quality affect our safety**
+
+
+
+## Outline
+
+![Screenshot 2021-11-27 183201](https://github.com/ShaunZhxiong/ImgGarage/img/Screenshot 2021-11-27 183201.png)
 
 ## Requirements
 
@@ -39,18 +56,21 @@ How the above items satisfy the requirements outlined in the final project descr
         ...    
     ```
 
-1. At least one of the datasets contains more than 1,000,000 rows.
+1. At least one of the datasets contains more than 1 million rows.
 
 1. ✅ It combines data collected from 3 or more different sources.
 
-1. The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
+1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
 1. ✅ You use one of the analysis techniques for urban street networks (e.g., osmnx, pandana), clustering (e.g., scikit-learn), or raster datasets.
 
-1. You perform a machine learning analysis with scikit-learn as part of the analysis.
+    **clustering (e.g., scikit-learn)**
 
-1. The webpage includes a significant interactive component (cross-filtering, interactive widgets, etc).
+1. ✅ You perform a machine learning analysis with scikit-learn as part of the analysis.
+
+    **(Cluster Analysis)**
+
+1. ✅The webpage includes a significant interactive component (cross-filtering, interactive widgets, etc).
 
 > As a rough guideline, we should shoot for something that is 3-4 times as involved as the required assignments.
-
 
