@@ -5,15 +5,6 @@
 
 The data set(s) you wish to use in the project.
 
-<<<<<<< HEAD
-| dataset                 | description                                                     | source                 |
-| ----------------------- | --------------------------------------------------------------- | ---------------------- |
-| Bing Street View        | 12000+ street view pics for Philadelphia                        | Bing Street View(2015) |
-| OpendataPhilly - Street | Street center line line                                         |                        |
-| ACS 2015                | Race and demography in 2015                                     | census bureau          |
-| 311 complaint           | Complaints about street quality in 2015                         | opendataphilly         |
-| Crime Incidents         | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
-=======
 | dataset          | description                                                  | source                 |
 | ---------------- | ------------------------------------------------------------ | ---------------------- |
 | Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
@@ -21,7 +12,6 @@ The data set(s) you wish to use in the project.
 | ACS 2015         | Race and demography in 2015                                  | census bureau          |
 | 311 complaint    | Complaints about street quality in 2015                      | opendataphilly         |
 | Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
->>>>>>> c68b499de389243dbdf88d9e9ba526a727fc0c09
 
 
 
