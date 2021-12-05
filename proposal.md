@@ -5,6 +5,15 @@
 
 The data set(s) you wish to use in the project.
 
+<<<<<<< HEAD
+| dataset                 | description                                                     | source                 |
+| ----------------------- | --------------------------------------------------------------- | ---------------------- |
+| Bing Street View        | 12000+ street view pics for Philadelphia                        | Bing Street View(2015) |
+| OpendataPhilly - Street | Street center line line                                         |                        |
+| ACS 2015                | Race and demography in 2015                                     | census bureau          |
+| 311 complaint           | Complaints about street quality in 2015                         | opendataphilly         |
+| Crime Incidents         | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
+=======
 | dataset          | description                                                  | source                 |
 | ---------------- | ------------------------------------------------------------ | ---------------------- |
 | Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
@@ -12,6 +21,7 @@ The data set(s) you wish to use in the project.
 | ACS 2015         | Race and demography in 2015                                  | census bureau          |
 | 311 complaint    | Complaints about street quality in 2015                      | opendataphilly         |
 | Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
+>>>>>>> c68b499de389243dbdf88d9e9ba526a727fc0c09
 
 
 
@@ -41,27 +51,27 @@ The data set(s) you wish to use in the project.
 
 1. Introduction about the project and method.
 
-   ![image-20211205151129131](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205151129131.png)
+   ![](data/ppt/1.jpeg)
 
 2.  Street Component Proportion: point map
 
-   ![image-20211205153516099](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153516099.png)
+   ![](data/ppt/2.png)
 
 3. Clustering for the components
 
-   ![image-20211205153254272](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153254272.png)
+   ![](data/ppt/3.png)
 
 4. Relationship between street componet and race
 
-   ![image-20211205153154431](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153154431.png)
+   ![](data/ppt/4.png)
 
 5. Relationship between street quality and crime. Correlation analysis
 
-   ![image-20211205152137327](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205152137327.png)
+   ![](data/ppt/5.png)
 
 6. Relationship between street quality and each crime type.
 
-   ![image-20211205152501005](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205152501005.png)
+   ![](data/ppt/6.png)
 
 ## Requirements
 
@@ -86,7 +96,11 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. ✅ It combines data collected from 3 or more different sources.
 
+<<<<<<< HEAD
     We collect data from Census Bureau, OpendataPhilly, and Bing Map.
+=======
+    `API`, `ACS`, `OpenDataPhilly`
+>>>>>>> c68b499de389243dbdf88d9e9ba526a727fc0c09
 
 1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
