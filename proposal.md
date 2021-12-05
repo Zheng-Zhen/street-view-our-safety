@@ -86,11 +86,7 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. ✅ It combines data collected from 3 or more different sources.
 
-<<<<<<< HEAD
     We collect data from Census Bureau, OpendataPhilly, and Bing Map.
-=======
-    `API`, `ACS`, `OpenDataPhilly`
->>>>>>> c68b499de389243dbdf88d9e9ba526a727fc0c09
 
 1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
