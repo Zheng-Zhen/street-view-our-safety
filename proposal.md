@@ -1,41 +1,47 @@
 # Proposal
-Submit a short (1/2 to 1 page) proposal that outlines and describe your plan for the final project. The proposal should discuss the following aspects of the project:
 
-## Datasets
+
+## Datasets to use
 
 The data set(s) you wish to use in the project.
 
-| dataset          | description                             | source         |
-| ---------------- | --------------------------------------- | -------------- |
-| Bing Street View | 12000+ street view pic from Bing (2015) |                |
-| Street           | Street center line                      |                |
-| ACS              |                                         | census bureau  |
-| 311 complaint    | Complaints about street quality         | opendataphilly |
-| ...              |                                         |                |
-
-## Question
-
-The questions that you want to explore.
-
-**How does streets affect our safety and equity?** 
+| dataset          | description                                                  | source                 |
+| ---------------- | ------------------------------------------------------------ | ---------------------- |
+| Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
+| ?Street          | ?Street center line                                          |                        |
+| ACS 2015         | Race and demography in 2015                                  | census bureau          |
+| 311 complaint    | Complaints about street quality in 2015                      | opendataphilly         |
+| Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
 
 
 
-## Method
+## Question to explore
 
-The analysis methods and techniques that you will use.
+#### How does streets affect our safety and equity?  (how or what is the relationship???)
 
-**1. Picture analysis to disassemble street quality in Philly, added with exotic 311 complaint dataset **
+1. How do the street qualities vary in streets of Philadelphia?
 
-**2. Use the above outcome to see what is the relationship between race and street quality, whether it achieves racial equity**
+2. What is the relationship between races and their associated living streets? Whether it has achieved racial equity or not?
 
-**3. Use the above outcome to see what is the relationship between crime and street quality, how dose the street quality affect our safety**
+3. What is the relationship between crimes and the qualities of living streets? For every specific crime type, Which environment is more prone to this kind of crime? 
+
+   
+
+## Method to utilize
+
+1. Picture analysis to disassemble street quality in Philly, added with exotic 311 complaint dataset to assess the street qualities in Philadelphia
+
+2. Use the above outcome to link with demography data in each census tract unit to see what is the relationship between race and street quality, whether it achieves racial equity
+
+3. Use the above outcome to link with crime incident data around Philadelphia to see what is the relationship between crime and street quality. And for every specific crime type, Which environment is more prone to this kind of crime? how dose the street quality affect our safety
 
 
 
 ## Outline
 
 ![Screenshot 2021-11-27 183201](https://github.com/ShaunZhxiong/ImgGarage/img/Screenshot 2021-11-27 183201.png)
+
+
 
 ## Requirements
 
@@ -59,6 +65,8 @@ How the above items satisfy the requirements outlined in the final project descr
 1. At least one of the datasets contains more than 1 million rows.
 
 1. ✅ It combines data collected from 3 or more different sources.
+
+    API,
 
 1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
