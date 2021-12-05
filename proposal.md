@@ -5,6 +5,7 @@
 
 The data set(s) you wish to use in the project.
 
+<<<<<<< HEAD
 | dataset                 | description                                                     | source                 |
 | ----------------------- | --------------------------------------------------------------- | ---------------------- |
 | Bing Street View        | 12000+ street view pics for Philadelphia                        | Bing Street View(2015) |
@@ -12,12 +13,21 @@ The data set(s) you wish to use in the project.
 | ACS 2015                | Race and demography in 2015                                     | census bureau          |
 | 311 complaint           | Complaints about street quality in 2015                         | opendataphilly         |
 | Crime Incidents         | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
+=======
+| dataset          | description                                                  | source                 |
+| ---------------- | ------------------------------------------------------------ | ---------------------- |
+| Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
+| Street           | Street center line                                           | opendataphilly         |
+| ACS 2015         | Race and demography in 2015                                  | census bureau          |
+| 311 complaint    | Complaints about street quality in 2015                      | opendataphilly         |
+| Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
+>>>>>>> c68b499de389243dbdf88d9e9ba526a727fc0c09
 
 
 
 ## Question to explore
 
-#### How does streets affect our safety and equity?  (how or what is the relationship???)
+#### What is the relationship between "street quality" and "safety and equity"?
 
 1. How do the street qualities vary in streets of Philadelphia?
 
@@ -39,9 +49,29 @@ The data set(s) you wish to use in the project.
 
 ## Outline
 
-![Screenshot 2021-11-27 183201](https://github.com/ShaunZhxiong/ImgGarage/img/Screenshot 2021-11-27 183201.png)
+1. Introduction about the project and method.
 
+   ![image-20211205151129131](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205151129131.png)
 
+2.  Street Component Proportion: point map
+
+   ![image-20211205153516099](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153516099.png)
+
+3. Clustering for the components
+
+   ![image-20211205153254272](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153254272.png)
+
+4. Relationship between street componet and race
+
+   ![image-20211205153154431](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205153154431.png)
+
+5. Relationship between street quality and crime. Correlation analysis
+
+   ![image-20211205152137327](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205152137327.png)
+
+6. Relationship between street quality and each crime type.
+
+   ![image-20211205152501005](C:/Users/shaun/AppData/Roaming/Typora/typora-user-images/image-20211205152501005.png)
 
 ## Requirements
 
