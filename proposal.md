@@ -86,18 +86,18 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. ✅ It combines data collected from 3 or more different sources.
 
-    We collect data from Census Bureau, OpendataPhilly, and Bing Map.
+    **We collect data from Census Bureau, OpendataPhilly, and Bing Map.**
 
 1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
-    We applied multiple manipulations to the datasets, including geospatial-joining, aggregation, clastering, correlation analysis.
+    **We applied multiple manipulations to the datasets, including geospatial-joining, aggregation, clastering, correlation analysis.**
 
 1. ✅ You use one of the analysis techniques for urban street networks (e.g., osmnx, pandana), clustering (e.g., scikit-learn), or raster datasets.
 
-    We used scikit-learn clustering to identify different types of street view points.
+    **We used scikit-learn clustering to identify different types of street view points.**
 
 1. You perform a machine learning analysis with scikit-learn as part of the analysis.
 
 1. ✅The webpage includes a significant interactive component (cross-filtering, interactive widgets, etc).
 
-    On the third page of the web, a list of button is created to filter the data.
+    **On the third page of the web, a list of button is created to filter the data.**
