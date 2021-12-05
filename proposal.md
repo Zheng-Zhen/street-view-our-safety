@@ -41,27 +41,27 @@ The data set(s) you wish to use in the project.
 
 1. Introduction about the project and method.
 
-   ![](data/ppt/1.jpeg)
+   <img src="data/ppt/1.jpeg" alt="drawing" width="500"/>
 
 2.  Street Component Proportion: point map
 
-   ![](data/ppt/2.png)
+   <img src="data/ppt/2.png" alt="drawing" width="500"/>
 
 3. Clustering for the components
 
-   ![](data/ppt/3.png)
+   <img src="data/ppt/3.png" alt="drawing" width="500"/>
 
 4. Relationship between street componet and race
 
-   ![](data/ppt/4.png)
+   <img src="data/ppt/4.png" alt="drawing" width="500"/>
 
 5. Relationship between street quality and crime. Correlation analysis
 
-   ![](data/ppt/5.png)
+   <img src="data/ppt/5.png" alt="drawing" width="500"/>
 
 6. Relationship between street quality and each crime type.
 
-   ![](data/ppt/6.png)
+   <img src="data/ppt/6.png" alt="drawing" width="500"/>
 
 ## Requirements
 
