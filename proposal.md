@@ -5,13 +5,13 @@
 
 The data set(s) you wish to use in the project.
 
-| dataset          | description                                                  | source                 |
-| ---------------- | ------------------------------------------------------------ | ---------------------- |
-| Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
-| ?Street          | ?Street center line                                          |                        |
-| ACS 2015         | Race and demography in 2015                                  | census bureau          |
-| 311 complaint    | Complaints about street quality in 2015                      | opendataphilly         |
-| Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
+| dataset                 | description                                                     | source                 |
+| ----------------------- | --------------------------------------------------------------- | ---------------------- |
+| Bing Street View        | 12000+ street view pics for Philadelphia                        | Bing Street View(2015) |
+| OpendataPhilly - Street | Street center line line                                         |                        |
+| ACS 2015                | Race and demography in 2015                                     | census bureau          |
+| 311 complaint           | Complaints about street quality in 2015                         | opendataphilly         |
+| Crime Incidents         | Crime incidents from the Philadelphia Police Department in 2015 | opendataphilly         |
 
 
 
@@ -66,19 +66,18 @@ How the above items satisfy the requirements outlined in the final project descr
 
 1. ✅ It combines data collected from 3 or more different sources.
 
-    API,
+    We collect data from Census Bureau, OpendataPhilly, and Bing Map.
 
 1. ✅The analysis of the data is reasonably complex, involving multiple steps (geospatial joins/operations, data shaping, data frame operations, etc).
 
+    We applied multiple manipulations to the datasets, including geospatial-joining, aggregation, clastering, correlation analysis.
+
 1. ✅ You use one of the analysis techniques for urban street networks (e.g., osmnx, pandana), clustering (e.g., scikit-learn), or raster datasets.
 
-    **clustering (e.g., scikit-learn)**
+    We used scikit-learn clustering to identify different types of street view points.
 
-1. ✅ You perform a machine learning analysis with scikit-learn as part of the analysis.
-
-    **(Cluster Analysis)**
+1. You perform a machine learning analysis with scikit-learn as part of the analysis.
 
 1. ✅The webpage includes a significant interactive component (cross-filtering, interactive widgets, etc).
 
-> As a rough guideline, we should shoot for something that is 3-4 times as involved as the required assignments.
-
+    On the third page of the web, a list of button is created to filter the data.
