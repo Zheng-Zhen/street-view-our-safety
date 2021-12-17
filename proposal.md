@@ -43,24 +43,34 @@ The data set(s) you wish to use in the project.
 
    <img src="data/ppt/1.jpeg" alt="drawing" width="500"/>
 
-2.  Street Component Proportion: point map
+2. Street Component Proportion: point map
+
+   Resource: https://altair-viz.github.io/gallery/choropleth.html
 
    <img src="data/ppt/2.png" alt="drawing" width="500"/>
 
 3. Clustering for the components
 
+   Question: How to join the geometry information
+
    <img src="data/ppt/3.png" alt="drawing" width="500"/>
 
 4. Relationship between street componet and race
+
+   Resource:https://altair-viz.github.io/gallery/stacked_bar_chart_with_text.html
 
    <img src="data/ppt/4.png" alt="drawing" width="500"/>
 
 5. Relationship between street quality and crime. Correlation analysis
 
+   Resource: https://altair-viz.github.io/gallery/errorbars_with_ci.html
+
    <img src="data/ppt/5.png" alt="drawing" width="500"/>
 
 6. Relationship between street quality and each crime type.
 
+   Resource: https://altair-viz.github.io/gallery/normed_parallel_coordinates.html
+   
    <img src="data/ppt/6.png" alt="drawing" width="500"/>
 
 ## Requirements
