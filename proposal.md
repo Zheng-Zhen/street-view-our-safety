@@ -17,9 +17,9 @@ The data set(s) you wish to use in the project.
 
 ## Question to explore
 
-#### What is the relationship between "street quality" and "safety and equity"?
+#### What is the relationship between "street space" and "safety" / "equity"?
 
-1. How do the street qualities vary in streets of Philadelphia?
+1. How do the street spaces vary in Philadelphia?
 
 2. What is the relationship between races and their associated living streets? Whether it has achieved racial equity or not?
 
