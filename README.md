@@ -8,6 +8,9 @@ and accompanying description including a summary of the results and the methods
 used in each step of the process (collection, analysis and
 visualization).
 
+## Group Member
+ZhaoZhen Xu, Xiong Zheng
+
 ## Due dates
 
 Written proposal due date: **Monday, December 6th** (or earlier)
