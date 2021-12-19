@@ -135,8 +135,64 @@ $(".map02-btn").on('click', function () {
 })
 
 // ======= map03 ======
-var map03 = L.map('map03').setView([39.9597471840457, -75.17893127441406], 14)
+var map03 = L.map('map03').setView([39.9698, -75.1791], 12)
 basemap03.addTo(map03);
+
+let cluster_pt_layer, cluster_poly_layer;
+
+let renderMap03 = function (layerName) {
+    let layer = {
+        "map03-1": cluster_pt_layer,
+        "map03-2": cluster_poly_layer
+    }[layerName];
+    addDataToMap(map03, layer, basemap03);
+}
+
+$.getJSON('data/p3-clustering-point.geojson', function (geojson) {
+    cluster_pt_layer = L.geoJSON(geojson, {
+        pointToLayer: function (feature, latlng) {
+            let c = feature.properties.color;
+            return L.circle(latlng, {
+                color: c,
+                opacity: 1,
+                weight: 1,
+                radius: 90,
+            })
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(
+                generatePopup("Clustering Label", feature.properties.label) +
+                generatePopup("ID", feature.properties.id)
+            );
+        }
+    });
+    renderMap03("map03-1");
+})
+
+$.getJSON('data/p3-clustering-polygon.geojson', function (geojson) {
+    cluster_poly_layer = L.geoJSON(geojson, {
+        style: (feature) => {
+            let c = feature.properties.color;
+            return {
+                color: c,
+                weight: .8,
+                opacity: 1,
+            };
+        },
+        onEachFeature: function (feature, layer) {
+            layer.bindPopup(
+                generatePopup("Block Group Name", feature.properties.NAME) +
+                generatePopup("Clustering Label", feature.properties.label)
+            );
+        }
+    });
+})
+
+$(".map03-btn").on('click', function () {
+    let t = $(this).attr("id");
+    console.log(t)
+    renderMap03(t);
+})
 
 // ======= map04 ======
 var map04 = L.map('map04').setView([39.9597471840457, -75.17893127441406], 14)
