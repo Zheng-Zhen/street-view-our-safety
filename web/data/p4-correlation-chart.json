@@ -1,0 +1,982 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+    "config": {
+        "view": {
+            "continuousHeight": 200,
+            "continuousWidth": 125
+        }
+    },
+    "datasets": {
+        "data-427c3ad1c46b0756a1e053aed785ff76": [
+            {
+                "x": 0.35,
+                "y": 700
+            }
+        ]
+    },
+    "vconcat": [
+        {
+            "hconcat": [
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-33f81a6666bef4d0a032cce6a6fb33be.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "wall"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts"
+                                    },
+                                    "field": "crime_counts",
+                                    "type": "quantitative",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    }
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "wall"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts"
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-9b4a9b2ad0e8b7da85ac5883615a1412.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "lives"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "lives"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-8a8f008fab21d13a5ebd4542a2320fdd.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "building"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "building"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-72a61e3cb5a8fe6101c1d9c7b3a07ddd.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "infrastructure"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "infrastructure"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-9b8c03505254c8da4c1a9617b8ac57e3.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "road"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "road"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts"
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "hconcat": [
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-5325af45d593b26384ac60362164cef0.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "sidewalk"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts"
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "sidewalk"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts"
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-ac646c426a2600f7ce8c8cd98b239a4a.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "sky"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "sky"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-2a15dabc586a930a8811f5cefa995f67.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "green"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "green"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-7ac3fb86674dd5496563e70ff3978f44.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "transportation"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "transportation"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "data": {
+                        "format": {
+                            "type": "json"
+                        },
+                        "url": "data/altair-data-448500aa6b41e3ee17e45ba0a0ba282b.json"
+                    },
+                    "layer": [
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#72B7B3"
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "publicservice"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": {
+                                "opacity": 0.10098,
+                                "size": 0.2,
+                                "type": "point",
+                                "clip": true
+                            }
+                        },
+                        {
+                            "encoding": {
+                                "color": {
+                                    "value": "#F55218"
+                                },
+                                "opacity": {
+                                    "value": 1
+                                },
+                                "strokeDash": {
+                                    "value": [
+                                        5,
+                                        5
+                                    ]
+                                },
+                                "x": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "publicservice"
+                                    },
+                                    "field": "value",
+                                    "type": "quantitative"
+                                },
+                                "y": {
+                                    "axis": {
+                                        "domain": false,
+                                        "ticks": false,
+                                        "title": "Crime Counts",
+                                        "titleFontSize": 0
+                                    },
+                                    "field": "crime_counts",
+                                    "scale": {
+                                        "domain": [
+                                            0,
+                                            200
+                                        ]
+                                    },
+                                    "type": "quantitative"
+                                }
+                            },
+                            "mark": "line",
+                            "transform": [
+                                {
+                                    "on": "value",
+                                    "regression": "crime_counts"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

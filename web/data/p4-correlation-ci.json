@@ -1,0 +1,134 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+    "config": {
+        "view": {
+            "continuousHeight": 300,
+            "continuousWidth": 400
+        }
+    },
+    "data": {
+        "name": "data-34e549dead40cd9ae2ae1f768584d859"
+    },
+    "width": "container",
+    "height": "container",
+    "datasets": {
+        "data-34e549dead40cd9ae2ae1f768584d859": [
+            {
+                "coefficient": 0.49741682683716504,
+                "highCI": "6.276",
+                "lowCI": "-5.840",
+                "vars": "wall"
+            },
+            {
+                "coefficient": 7.812792522962962,
+                "highCI": "16.489",
+                "lowCI": "4.331",
+                "vars": "lives"
+            },
+            {
+                "coefficient": -9.340111520992727,
+                "highCI": "5.769",
+                "lowCI": "-20.169",
+                "vars": "building"
+            },
+            {
+                "coefficient": -3.8126106665491912,
+                "highCI": "1.569",
+                "lowCI": "-9.604",
+                "vars": "infrastructure"
+            },
+            {
+                "coefficient": -5.399748479787273,
+                "highCI": "2.704",
+                "lowCI": "-11.021",
+                "vars": "road"
+            },
+            {
+                "coefficient": -2.523926405443298,
+                "highCI": "2.132",
+                "lowCI": " -8.502",
+                "vars": "sidewalk"
+            },
+            {
+                "coefficient": -40.539425593347836,
+                "highCI": "-31.044",
+                "lowCI": "-48.509",
+                "vars": "sky"
+            },
+            {
+                "coefficient": -62.71106832957416,
+                "highCI": "-46.761",
+                "lowCI": "-75.801",
+                "vars": "green"
+            },
+            {
+                "coefficient": 3.8472911921363075,
+                "highCI": "9.941",
+                "lowCI": "-1.347",
+                "vars": "transportation"
+            },
+            {
+                "coefficient": 73.77484095091819,
+                "highCI": "96.606",
+                "lowCI": "46.378",
+                "vars": "publicservice"
+            }
+        ]
+    },
+    "layer": [
+        {
+            "encoding": {
+                "color": {
+                    "value": "#F55218"
+                },
+                "size": {
+                    "value": 2
+                },
+                "x": {
+                    "field": "lowCI",
+                    "type": "quantitative"
+                },
+                "x2": {
+                    "field": "highCI"
+                },
+                "y": {
+                    "field": "vars",
+                    "type": "nominal"
+                }
+            },
+            "mark": "line"
+        },
+        {
+            "encoding": {
+                "color": {
+                    "value": "#72B7B3"
+                },
+                "size": {
+                    "value": 40
+                },
+                "x": {
+                    "axis": {
+                        "domain": false,
+                        "ticks": false,
+                        "title": "Coefficient"
+                    },
+                    "field": "coefficient",
+                    "type": "quantitative"
+                },
+                "y": {
+                    "axis": {
+                        "domain": false,
+                        "ticks": false,
+                        "title": "Variables"
+                    },
+                    "field": "vars",
+                    "type": "nominal"
+                }
+            },
+            "mark": {
+                "fill": "#72B7B3",
+                "type": "point"
+            }
+        }
+    ]
+}

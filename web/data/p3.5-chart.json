@@ -1,0 +1,691 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+  "config": {
+    "view": {
+      "continuousHeight": 300,
+      "continuousWidth": 400,
+      "strokeWidth": 0
+    }
+  },
+  "height": 80,
+  "width": "container",
+  "data": {
+    "name": "data-a23f9b52612043ab26c7584e9a860aa2"
+  },
+  "datasets": {
+    "data-a23f9b52612043ab26c7584e9a860aa2": [
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.9996957492937041,
+        "valueSquare": 0.9993915911559005,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.7462407107890114,
+        "valueSquare": 0.556875198438889,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.8411815358248829,
+        "valueSquare": 0.7075863762127087,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.6921880829943289,
+        "valueSquare": 0.4791243422393639,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.5513542235902275,
+        "valueSquare": 0.3039914798707825,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.11422046998489209,
+        "valueSquare": 0.013046315763569634,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.10278665837942426,
+        "valueSquare": 0.010565097140808468,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.5326322800887446,
+        "valueSquare": 0.2836971457925349,
+        "variable": "wall"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.48573357978115855,
+        "valueSquare": 0.23593711052701913,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.4154053170686985,
+        "valueSquare": 0.17256157744894593,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.7723405757690323,
+        "valueSquare": 0.5965099649792402,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.7413166280847586,
+        "valueSquare": 0.5495503430749563,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.9861294059502919,
+        "valueSquare": 0.9724512052798755,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.09665586319281043,
+        "valueSquare": 0.009342355889547287,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.18597600258313038,
+        "valueSquare": 0.03458707353680052,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.47670732765785845,
+        "valueSquare": 0.22724987624269682,
+        "variable": "lives"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.805560830918658,
+        "valueSquare": 0.6489282523103588,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.3210677894582567,
+        "valueSquare": 0.10308452542761146,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.3143655522750986,
+        "valueSquare": 0.09882570045722776,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.29791558020253917,
+        "valueSquare": 0.08875369292741554,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.5602483094212858,
+        "valueSquare": 0.3138781682094088,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.0692744242968566,
+        "valueSquare": 0.004798945861660915,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.17147595148186842,
+        "valueSquare": 0.029404001936612092,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.26386679924045703,
+        "valueSquare": 0.06962568774140365,
+        "variable": "building"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.7879934420807079,
+        "valueSquare": 0.6209336647622019,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.9635767401815276,
+        "valueSquare": 0.9284801342188592,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.8371406697069583,
+        "valueSquare": 0.7008045008774147,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.7199077807906027,
+        "valueSquare": 0.5182672128428505,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.5660562989780417,
+        "valueSquare": 0.3204197336127181,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.3705345998874062,
+        "valueSquare": 0.13729588971372023,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.8257305347158758,
+        "valueSquare": 0.6818309159621662,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.47085030927666977,
+        "valueSquare": 0.22170001374593556,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "infrastructure"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.9206147456830411,
+        "valueSquare": 0.8475315099690505,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.845634515327882,
+        "valueSquare": 0.715097733513822,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.5424109667892469,
+        "valueSquare": 0.2942096568932455,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.446706330362466,
+        "valueSquare": 0.1995465455859006,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.4237592324707638,
+        "valueSquare": 0.17957188710421085,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.5883402472854623,
+        "valueSquare": 0.3461442465759189,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.4325124049742162,
+        "valueSquare": 0.1870669804565804,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.21773182191532958,
+        "valueSquare": 0.047407146274568795,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "road"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.96491551472351,
+        "valueSquare": 0.9310619505541362,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.8337188374181153,
+        "valueSquare": 0.6950870998658137,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.8295832872611187,
+        "valueSquare": 0.6882084305029639,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.6864134880946614,
+        "valueSquare": 0.4711634766382799,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.9038958451323919,
+        "valueSquare": 0.817027698847601,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.4665292986682869,
+        "valueSquare": 0.21764958651592364,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.26787737291428393,
+        "valueSquare": 0.07175828691945833,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.23432873195783727,
+        "valueSquare": 0.05490995462096795,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "sidewalk"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.639314505878266,
+        "valueSquare": 0.4087230374263714,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.6074117215477098,
+        "valueSquare": 0.3689489994735526,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.6314198210263591,
+        "valueSquare": 0.3986909903849593,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.6772140743031583,
+        "valueSquare": 0.4586189024342836,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.4251336212321806,
+        "valueSquare": 0.1807385959019872,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.013700906562733841,
+        "valueSquare": 0.00018771484064076323,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.14724211706921006,
+        "valueSquare": 0.02168024103902296,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.052339849483120954,
+        "valueSquare": 0.002739459843915757,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "sky"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.2501018536918447,
+        "valueSquare": 0.06255093722009689,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.3043464097958031,
+        "valueSquare": 0.0926267371555949,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.4166477401677854,
+        "valueSquare": 0.1735953393869224,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.4083326263528373,
+        "valueSquare": 0.16673553374420583,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.41231854983963306,
+        "valueSquare": 0.17000658654185796,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.8362334380489296,
+        "valueSquare": 0.699286362911133,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.7949511925140524,
+        "valueSquare": 0.6319473984795141,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.6593396812614167,
+        "valueSquare": 0.4347288152859066,
+        "variable": "green"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.5705214846369547,
+        "valueSquare": 0.325494764432355,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.5844405197401729,
+        "valueSquare": 0.34157072111416337,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.5056209527995895,
+        "valueSquare": 0.2556525479099647,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 0.8224238771776429,
+        "valueSquare": 0.6763810337519066,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.8662763437084195,
+        "valueSquare": 0.7504347036688278,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.29539617416771624,
+        "valueSquare": 0.08725889971292375,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.3857863173887914,
+        "valueSquare": 0.14883108268440529,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.1992650960887216,
+        "valueSquare": 0.03970657851924745,
+        "variable": "transportation"
+      },
+      {
+        "roundedWhitePercep": "0.0",
+        "value": 0.43155048536360713,
+        "valueSquare": 0.1862358214175649,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "1.0",
+        "value": 0.5257792371151402,
+        "valueSquare": 0.2764438061813788,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "2.0",
+        "value": 0.2924715030859154,
+        "valueSquare": 0.08553958011733463,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "3.0",
+        "value": 0.3178132743567668,
+        "valueSquare": 0.10100527735736954,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "4.0",
+        "value": 1.0,
+        "valueSquare": 1.0,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "5.0",
+        "value": 0.46259526228998704,
+        "valueSquare": 0.21399437669314192,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "6.0",
+        "value": 0.13590112540139665,
+        "valueSquare": 0.01846911588536614,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "7.0",
+        "value": 0.3153031755698923,
+        "valueSquare": 0.09941609252445832,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "8.0",
+        "value": 0.0,
+        "valueSquare": 0.0,
+        "variable": "publicservice"
+      },
+      {
+        "roundedWhitePercep": "9.0",
+        "value": 0.14978012741023355,
+        "valueSquare": 0.022434086567025797,
+        "variable": "publicservice"
+      }
+    ]
+  },
+  "encoding": {
+    "color": {
+      "condition": {
+        "field": "variable",
+        "scale": {
+          "scheme": "category20b"
+        },
+        "selection": "selector003",
+        "type": "nominal"
+      },
+      "value": "lightgray"
+    },
+    "opacity": {
+      "condition": {
+        "selection": "selector003",
+        "value": 0.6
+      },
+      "value": 0.3
+    },
+    "row": {
+      "field": "variable",
+      "type": "nominal",
+      "header": {
+        "titleFontSize": 0,
+        "labelFontSize": 15
+      }
+    },
+    "x": {
+      "axis": {
+        "domain": false,
+        "labelAngle": 0,
+        "ticks": false,
+        "titleFontSize": 15
+      },
+      "field": "roundedWhitePercep",
+      "title": "White Percentage of Block Group",
+      "type": "nominal"
+    },
+    "y": {
+      "axis": {
+        "domain": false,
+        "ticks": false,
+        "titleFontSize": 0
+      },
+      "field": "value",
+      "title": "Value",
+      "type": "quantitative"
+    }
+  },
+  "mark": {
+    "interpolate": "natural",
+    "point": true,
+    "tooltip": true,
+    "type": "area"
+  },
+  "selection": {
+    "selector003": {
+      "bind": "legend",
+      "fields": [
+        "variable"
+      ],
+      "type": "multi"
+    },
+    "selector004": {
+      "bind": "scales",
+      "encodings": [
+        "x",
+        "y"
+      ],
+      "type": "interval"
+    }
+  }
+}
