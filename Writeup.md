@@ -222,12 +222,14 @@ Altair scatter plot is used to present the correlation between each street compo
 | Public service | 71.491967   | (46.378 , 96.606)   |
 <center>Table.3 - Regression Result</center>
 
-
+The figure below describes the coefficient of each element, along with their confidence interval. Element such as lives, sky, public service, and green are significant. Specifically, elements lives and public service have a positive relationship with crime numbers, while sky and green have a negative relationship with crime numbers, which means that streets with more green and less people is correlated with less crimes. 
 
 <figure><center>
 <img src="data/ppt/confidence_Interval.png" alt="drawing" width="600"/>
 <figcaption>Fig.10 - Confidence Interval for each component</figcaption>
 </center></figure>
+
+
 
 
 #### 5. Relationship Between Different Types of Crime and Street Space 
