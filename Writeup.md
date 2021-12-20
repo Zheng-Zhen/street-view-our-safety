@@ -2,9 +2,12 @@
 
 
 
-## Group Member
+## Team
 
-ZhaoZhen Xu, Xiong Zheng
+Member: ZhaoZhen Xu, Xiong Zheng
+
+Tutor: Nick Hand
+
 
 
 
@@ -22,6 +25,8 @@ Streets are the backbone of a city structure. Street qualities (including greeni
 ## Method & Results
 
 Compared to the traditional method which will use manually reported or collected datasets (e.g. 311 complaints dataset and house sales dataset). Our method is proactive because we do images analysis on the Street Views provided by the Internet company , whose images are evenly distributed within Philadelphia, preventing the effect of the broken window theory and optionally reported dataset. Broken window theory says people in different classes or communities in different condition will have various tendencies toward reporting and changing the situation.
+
+
 
 #### 1. Street Component Analysis
 
@@ -75,7 +80,7 @@ We then count the pixel number of each segment (each color), and calculate the p
 |  761434 |   6817 |       8 |         9 |     75 |      876 | 127222 |           51155 |  ... |
 |     ... |    ... |     ... |       ... |    ... |      ... |    ... |             ... |  ... |
 
-*Table.1 - Counting the pixel number of each segment*
+<center>Table.1 - Counting the pixel number of each segment</center>
 
 Then, we combined the output components into ten categories (Green, Wall, Lives, Building, Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the analysis more concise and intuitive. 
 
@@ -92,7 +97,7 @@ Then, we combined the output components into ten categories (Green, Wall, Lives,
 | Transportation | Car + SUVPickupTruck + Truck_Bus                                          |
 | PublicService  | CartLuggagePram + SignSymbol + TrafficLight                               |
 
-*Table.2 - Components and Catefories*
+<center>Table.2 - Components and Catefories</center>
 
 
 
@@ -104,8 +109,9 @@ We plot each category of street view point in the map of Philadelphia, using col
 <img src="data/ppt/component.jpeg" alt="drawing" width="500"/>
 <figcaption>Fig.4 - Visualization of Component Analysis Image</figcaption>
 </center></figure>
-
 From the map, we can learn that for the greening, the street in the north-west and north-east areas have a higher greening proportion. As for the wall, which may represent the defense level of a street, west and mid Philadelphia have higher proportions. For the active lives and buildings on the street, mid and south Philadelphia have higher proportions, which may be the outcome of the high dense population. And the Center City and south Philadelphia, which are main commercial areas of Philadelphia, have more sidewalks and cars on the street; while it is more easy to see the sky in the east-north Philadelphia.
+
+
 
 
 #### 2. Clustering for street quality
@@ -122,25 +128,65 @@ Interestingly, even though we did not include the geometry feature when doing th
 
 ##### 1b. Visualization & Result
 
-The quantitative diagram for these clustering is as follows. 
+We use bar diagram to display the quantitative difference between each category. The quantitative diagram for these clustering is as follows. 
+
+<figure><center>
+<img src="data/ppt/clusteringDiagram.jpg" alt="drawing" width="800"/>
+<figcaption>Fig.5 - Visualization of Clustering Diagram</figcaption>
+</center></figure>
+
 
 Based on above quantitative diagram. We attach labels to these four categories, which may describe the feature of these clustering. The labels are as follow.
-`1: High-density` Description needs to be filled.
-`2: Lush`
-`3: Spacious`
-`4: Townhouse`
+**`1: High-density`** 
+
+This clustering mainly distributes at the center city which is the most prosperous area in Philadelphia, and it has more buildings, less green, and more openness (less wall and more road) compared to other areas.
+
+**`2: Lush`**
+
+This clustering mainly distributes at the west and mid-north Philadelphia. The features of this clustering are low building density, high street greening, and wide road.
+
+**`3: Spacious`**
+
+This clustering distributes around large natural parks. And besides this, it has relatively less buildings. These two indicated that it is easier to see the sky in the street, which also validated by the analysis. And also this category has more walls, less open to the public compared to other areas.
+
+**`4: Townhouse`**
+
+As this name, townhouse, indicates, the mainly building type within this clustering is townhouse. Therefore, this clustering has more greening, which is mainly made up of private lawns and gardens of townhouses, and less road.
 
 
 
 #### 3. Relationship between Street Component & Race
 
+##### 1a. Data Collection & Wrangling
+
+Aside from the component dataset obtained from the above procedure, a dataset of demography is collected. We use the ACS api `acs.query`to collect the demography data of 2015, and calculate the white population percentage of each census block group. Also, its corresponding geometry is obtained from `acs.set_mapservice`, and merged with the previous dataset.
+
+After this, we use `gpd.sjoin` to join the census white population percentage data with the street view dataset. In the end, a dataset with street component for all collection points and its related demography dataset is obtained.
+
+##### 1b. Visualization & Result
+
+The race distribution is listed below. From the map, we can see the high-white-percentage community are mainly distributed at the north-west, north-east and south Philadelphia.
+<figure><center>
+<img src="data/ppt/raceDistribution.jpg" alt="drawing" width="500"/>
+<figcaption>Fig.6 - Visualization of Race Distribution map</figcaption>
+</center></figure>
+
+Corresponding to the above map, an area chart is used to display the change of each street element with the percentage of white population increased. 
+
+<figure><center>
+<img src="data/ppt/elementWithRace.jpg" alt="drawing" width="500"/>
+<figcaption>Fig.7 - Visualization of White PPL % and Street Component</figcaption>
+</center></figure>
+
+From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percen
+
+#### 4. Relationship between Street Component & Crime
+
+##### 1a. Data Collection
+
+Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01.
 
 
-### Crime
-
-Data : OpenDataPhilly
-
-Method: API from 2015-01-01 to 2016-01-01
 
 Select crime types: Select by the Top 20 of the aggregated count
 
