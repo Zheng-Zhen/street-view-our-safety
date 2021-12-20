@@ -29,7 +29,7 @@ Compared to the traditional method which will use manually reported or collected
 
 The Bing Street View is collected by [Bing Developer Api](https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api). This part of codes can be found [here](./data/streetview/streetViewDownloader.ipynb).
 
-```
+```python
 def downloadImage(lon,lat):
     point = [f"{lon:.5f}" ,f"{lat:.5f}"]
 
@@ -54,9 +54,47 @@ The images were taken by the Bing at 2015, and we wrapped each image every 100m.
 
 ##### 1b. Component Analysis
 
-Wait to be filled
+An image segmentation method `SegNet` is used to analyzing the elements and their proportion in the images, as described in *SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation Vijay Badrinarayanan, Alex Kendall and Roberto Cipolla, PAMI 2017 [http://arxiv.org/abs/1511.00561]* The implication of SegNet in this project is heavliy based on https://github.com/GeorgeSeif/Semantic-Segmentation-Suite.
 
-In the end, we combined the output component into ten categories (Green, Wall, Lives, Building, Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the analysis more concise and intuitive. 
+
+Here is a sample of the segmentation output.
+
+<figure><center>
+<img src="data/ppt/streetview_pro_example.png" alt="drawing" width="500"/>
+<figcaption>Fig.3 - Sample of the Street View Collection Image</figcaption>
+</center></figure>
+
+We then count the pixel number of each segment (each color), and calculate the proportion of each segment by dividing the total pixel number.
+
+| pointId | Animal | Archway | Bicyclist | Bridge | Building |    Car | CartLuggagePram |  ... |
+| ------: | -----: | ------: | --------: | -----: | -------: | -----: | --------------: | ---: |
+|  641548 |  10394 |       4 |        57 |    513 |     3961 | 185859 |            6573 |  ... |
+|  640416 |   1313 |       1 |         0 |   2348 |     3583 | 339775 |            6591 |  ... |
+|  620130 |   7230 |       1 |        37 |   1012 |      143 | 179598 |            9079 |  ... |
+|  401340 |   9336 |       0 |         0 |   1454 |      733 | 204396 |           27068 |  ... |
+|  761434 |   6817 |       8 |         9 |     75 |      876 | 127222 |           51155 |  ... |
+|     ... |    ... |     ... |       ... |    ... |      ... |    ... |             ... |  ... |
+
+*Table.1 - Counting the pixel number of each segment*
+
+Then, we combined the output components into ten categories (Green, Wall, Lives, Building, Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the analysis more concise and intuitive. 
+
+| Categories     | Components                                                                |
+| -------------- | ------------------------------------------------------------------------- |
+| Wall           | Column_Pole + Fence + Wall + TrafficCone                                  |
+| Lives          | Animal + Bicyclist + Child + Pedestrain + MotorcycleScooter + otherMoving |
+| Building       | Archway + Building                                                        |
+| Infrastructure | Bridge + ParkingBlock + Train + Tunnel                                    |
+| Road           | Road + RoadShoulder + LaneMkgsDriv+ LaneMkgsNonDriv                       |
+| Sidewalk       | Sidewalk                                                                  |
+| Sky            | Sky                                                                       |
+| Green          | Tree + VegetationMisc                                                     |
+| Transportation | Car + SUVPickupTruck + Truck_Bus                                          |
+| PublicService  | CartLuggagePram + SignSymbol + TrafficLight                               |
+
+*Table.2 - Components and Catefories*
+
+
 
 ##### 1c. Visualization & Result
 
@@ -64,7 +102,7 @@ We plot each category of street view point in the map of Philadelphia, using col
 
 <figure><center>
 <img src="data/ppt/component.jpeg" alt="drawing" width="500"/>
-<figcaption>Fig.3 - Visualization of Component Analysis Image</figcaption>
+<figcaption>Fig.4 - Visualization of Component Analysis Image</figcaption>
 </center></figure>
 
 From the map, we can learn that for the greening, the street in the north-west and north-east areas have a higher greening proportion. As for the wall, which may represent the defense level of a street, west and mid Philadelphia have higher proportions. For the active lives and buildings on the street, mid and south Philadelphia have higher proportions, which may be the outcome of the high dense population. And the Center City and south Philadelphia, which are main commercial areas of Philadelphia, have more sidewalks and cars on the street; while it is more easy to see the sky in the east-north Philadelphia.
@@ -78,7 +116,7 @@ Based on the above street component outcome, KMeans Clustering Method is used to
 
 <figure><center>
 <img src="data/ppt/clustering.jpg" alt="drawing" width="500"/>
-<figcaption>Fig.4 - Visualization of Clustering map</figcaption>
+<figcaption>Fig.5 - Visualization of Clustering map</figcaption>
 </center></figure>
 Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the  administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
 
