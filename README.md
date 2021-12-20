@@ -11,6 +11,13 @@ visualization).
 ## Group Member
 ZhaoZhen Xu, Xiong Zheng
 
+## [Project Website](http://550.orifish.tech/)
+
+## [Project WriteUp](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
+
+## [Project Proposal](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
+
+
 ## Due dates
 
 Written proposal due date: **Monday, December 6th** (or earlier)
