@@ -24,7 +24,7 @@ Project due date: **5pm on Monday, December 20th**
 The final deliverable **must include all three of the below items**:
 
 1. a web-based data visualization with a URL (public or private)
-1. a document describing the project, the results, and the technical methods used in each step (collection, analysis and visualization)
+1. **a document ~~describing the project~~, the results, and the technical methods used in each step (collection, analysis and visualization)**
 1. all code/spreadsheets/datasets used
 
 The materials for steps #2 an #3 above should be submitted to your own specific GitHub repository, which can be created using the link below:
