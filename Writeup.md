@@ -66,6 +66,7 @@ We plot each category of street view point in the map of Philadelphia, using col
 <img src="data/ppt/component.jpeg" alt="drawing" width="500"/>
 <figcaption>Fig.3 - Visualization of Component Analysis Image</figcaption>
 </center></figure>
+
 From the map, we can learn that for the greening, the street in the north-west and north-east areas have a higher greening proportion. As for the wall, which may represent the defense level of a street, west and mid Philadelphia have higher proportions. For the active lives and buildings on the street, mid and south Philadelphia have higher proportions, which may be the outcome of the high dense population. And the Center City and south Philadelphia, which are main commercial areas of Philadelphia, have more sidewalks and cars on the street; while it is more easy to see the sky in the east-north Philadelphia.
 
 
@@ -73,15 +74,29 @@ From the map, we can learn that for the greening, the street in the north-west a
 
 ##### 1a. Clustering Analysis
 
-Based on the above street component outcome, KMeans Clustering Method is used to find concise descriptions of these components. After attempts, we set the clustering number as four. And the label of these four clustering is as follows.
+Based on the above street component outcome, KMeans Clustering Method is used to find concise descriptions of these components. After attempts, we set the clustering number as four. 
 
-1:'High-density'
+<figure><center>
+<img src="data/ppt/clustering.jpg" alt="drawing" width="500"/>
+<figcaption>Fig.4 - Visualization of Clustering map</figcaption>
+</center></figure>
+Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the  administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
 
-2:'Lush'
+##### 1b. Visualization & Result
 
-3:"Spacious"
+The quantitative diagram for these clustering is as follows. 
 
-4:"Townhouse"
+Based on above quantitative diagram. We attach labels to these four categories, which may describe the feature of these clustering. The labels are as follow.
+`1: High-density` Description needs to be filled.
+`2: Lush`
+`3: Spacious`
+`4: Townhouse`
+
+
+
+#### 3. Relationship between Street Component & Race
+
+
 
 ### Crime
 
