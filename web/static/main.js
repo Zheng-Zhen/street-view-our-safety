@@ -46,11 +46,6 @@ let basemap04 = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/light
     maxZoom: 18,
     attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">Carto</a>'
 })
-let basemap05 = L.tileLayer('https://{s}.basemaps.cartocdn.com/rastertiles/light_all/{z}/{x}/{y}.png', {
-    maxZoom: 18,
-    attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">Carto</a>'
-})
-
 
 
 // ======= map01 ======
@@ -132,6 +127,7 @@ $.getJSON('data/pointsWithSeg.geojson', function (geojson) {
 $(".map02-btn").on('click', function () {
     let t = $(this).text();
     renderMap02(t);
+    $("b.map02-text").text(t)
 })
 
 // ======= map03 ======
@@ -192,15 +188,62 @@ $(".map03-btn").on('click', function () {
     let t = $(this).attr("id");
     renderMap03(t);
     // change the legend
-    $('.legend-p3').toggleClass('legend-p3-circle');
+    $('.map03-legend div .legend').toggleClass('circle');
 })
 
-// ======= map04 ======
-var map04 = L.map('map04').setView([39.9597471840457, -75.17893127441406], 14)
+// ======= map3.5 ======
+var map04 = L.map('map-35', { scrollWheelZoom: false }).setView([39.9698, -75.1791], 11)
 basemap04.addTo(map04);
+vegaEmbed('#chart-35', "data/p3.5-chart.json").then(function (result) {
+}).catch(console.error);
+
+$.getJSON('data/p3.5-map.geojson', function (geojson) {
+
+    L.geoJSON(geojson, {
+        style: (feature) => {
+            let n = feature.properties.whitePercep;
+            let c = chroma.scale("viridis")(n);
+            return {
+                color: c,
+                weight: .8,
+                opacity: 1,
+            };
+        },
+        onEachFeature: function (feature, layer) {
+            if (feature.properties.whitePercep === null) { return };
+            layer.bindPopup(
+                generatePopup("Block Group Name", feature.properties.NAME) +
+                generatePopup("Total Population", feature.properties.totalPop) +
+                generatePopup("White Percentage", (feature.properties.whitePercep * 100).toFixed(4) + "%") +
+                generatePopup("Non-White Percentage", (feature.properties.nonwhitePercep * 100).toFixed(4) + "%")
+            );
+        },
+
+    }).addTo(map04);
+})
+
+
+// ======= map04 ======
+vegaEmbed('#chart04-1', "data/p4-correlation-chart.json").then(function (result) {
+}).catch(console.error);
+vegaEmbed('#chart04-2', "data/p4-correlation-ci.json").then(function (result) {
+}).catch(console.error);
 
 // ======= page05 ======
 var chart05_conf = "data/p5-SV-Crime-chart.json";
 vegaEmbed('#chart-05', chart05_conf).then(function (result) {
-    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
 }).catch(console.error);
+
+
+$(window).on("scroll", () => {
+    let n = window.scrollY / 800;
+    // let c = chroma.scale(["white", "#f0c5fa"])(n).hex();
+    $(".web-title").css('opacity', 1 - n);
+    // console.log(c, $(".webtitle").css('color'))
+})
+
+
+
+
+
+
