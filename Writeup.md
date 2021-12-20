@@ -30,7 +30,7 @@ Compared to the traditional method which will use manually reported or collected
 
 #### 1. Street Component Analysis
 
-##### 1a. Collection
+##### a. Collection
 
 The Bing Street View is collected by [Bing Developer Api](https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api). This part of codes can be found [here](./data/streetview/streetViewDownloader.ipynb).
 
@@ -58,7 +58,7 @@ The images were taken by the Bing at 2015, and we wrapped each image every 100m.
 <figcaption>Fig.2 - Sample of the Street View Collection Image</figcaption>
 </center></figure>
 
-##### 1b. Component Analysis
+##### b. Component Analysis
 
 An image segmentation method `SegNet` is used to analyzing the elements and their proportion in the images, as described in *SegNet: A Deep Convolutional Encoder-Decoder Architecture for Image Segmentation Vijay Badrinarayanan, Alex Kendall and Roberto Cipolla, PAMI 2017 [http://arxiv.org/abs/1511.00561]* The implication of SegNet in this project is heavliy based on https://github.com/GeorgeSeif/Semantic-Segmentation-Suite.
 
@@ -102,7 +102,7 @@ Then, we combined the output components into ten categories (Green, Wall, Lives,
 
 
 
-##### 1c. Visualization & Result
+##### c. Visualization & Result
 
 We plot each category of street view point in the map of Philadelphia, using color to represents the proportion. The purple represents a low proportion and the yellow represents a high proportion. The technical platforms used here are leaflet (to make the map) and the html language (to make the interactive buttons). 
 
@@ -118,7 +118,7 @@ From the map, we can learn that for the greening, the street in the north-west a
 
 #### 2. Clustering for street views
 
-##### 1a. Clustering Analysis
+##### a. Clustering Analysis
 
 Based on the above street component outcome, KMeans Clustering Method is used to find concise descriptions of these components. After attempts, we set the clustering number as four. 
 
@@ -129,7 +129,7 @@ Based on the above street component outcome, KMeans Clustering Method is used to
 
 Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
 
-##### 1b. Visualization & Result
+##### b. Visualization & Result
 
 We use bar diagram to display the quantitative difference between each category. The quantitative diagram for these clustering is as follows. 
 
@@ -161,13 +161,13 @@ As this name, townhouse, indicates, the mainly building type within this cluster
 
 #### 3. Relationship between Street Component & Race
 
-##### 1a. Data Collection & Wrangling
+##### a. Data Collection & Wrangling
 
 Aside from the component dataset obtained from the above procedure, a dataset of demography is collected. We use the ACS api `acs.query`to collect the demography data of 2015, and calculate the white population percentage of each census block group. Also, its corresponding geometry is obtained from `acs.set_mapservice`, and merged with the previous dataset.
 
 After this, we use `gpd.sjoin` to join the census white population percentage data with the street view dataset. In the end, a dataset with street component for all collection points and its related demography dataset is obtained.
 
-##### 1b. Visualization & Result
+##### b. Visualization & Result
 
 The race distribution is listed below. From the map, we can see the high-white-percentage community are mainly distributed at the north-west, north-east and south Philadelphia.
 
@@ -179,38 +179,66 @@ The race distribution is listed below. From the map, we can see the high-white-p
 Corresponding to the above map, an area chart is used to display the change of each street element with the percentage of white population increased. 
 
 <figure><center>
-<img src="data/ppt/elementWithRace.jpg" alt="drawing" width="500"/>
+<img src="data/ppt/elementWithRace.jpg" alt="drawing" width="700"/>
 <figcaption>Fig.7 - Visualization of White PPL % and Street Component</figcaption>
 </center></figure>
 
-From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percen
+
+From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percentage community.
 
 #### 4. Relationship between Street Component & Crime
 
-##### 1a. Data Collection
+##### a. Data Collection & Wrangling
 
-Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01.
+Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01. And we also aggregate the occurring number by crime type to select the Top 20 for further analysis. The following is the bar plot of aggregated crime occurring number. 
+
+<figure><center>
+<img src="data/ppt/crimeselection.png" alt="drawing" width="600"/>
+<figcaption>Fig.8 - Aggregated Crime Occurring Number</figcaption>
+</center></figure>
+
+After this, we count the incidents of selected crime types within the 100 meter buffer of each street view collection point, using the method of `buffer` and `gpd.sjoin`. In the end, we get a dataset which has each street component proportion and its aggregated crime count.
+
+##### b. Regression and Visualization
+
+<figure><center>
+<img src="data/ppt/Scatterplot.jpg" alt="drawing" width="600"/>
+<figcaption>Fig.9 - Relationship between each street component and crime incident</figcaption>
+</center></figure>
+
+Altair scatter plot is used to present the correlation between each street component and crime incident. To further examine the relationship, we use the `sm.OLS` to run the regression, where the crime count is the dependent variable and the street components are the independent variables. This regression's aim is not to accurately predict the crime count, but to see the coefficient of each independent variable to the crime count. (Due to some confidence interval cross over "0", so even these `Building`, `Road`, and `Sidewald` variables have negative coefficient in the regression model, they display a positive relationship in the scatter plot)
+
+| Element        | Coefficient | Confidence Interval |
+| -------------- | ----------- | ------------------- |
+| Wall           | 0.217647    | (-5.840 , 6.276)    |
+| Lives          | 10.409833   | (4.331 , 16.489)    |
+| Building       | -7.1996504  | (-20.169 , 5.769)   |
+| Infrastructure | -4.0176545  | (-9.604 , 1.569)    |
+| Road           | -4.1585966  | (-11.021 , 2.704)   |
+| Sidewalk       | -3.1852387  | (-8.502 , 2.132)    |
+| Sky            | -39.7762518 | (-48.509 , -31.044) |
+| Green          | -61.2810289 | (-75.801 , -46.761) |
+| Transportation | 4.29717610  | (-1.347 , 9.941)    |
+| Public service | 71.491967   | (46.378 , 96.606)   |
+<center>Table.3 - Regression Result</center>
 
 
 
-Select crime types: Select by the Top 20 of the aggregated count
-
-<img src="exploratory/writeup_img_repositpry/crimeselection.png" alt="drawing" width="500"/>
-
-Attach nearest street view point attributes to each crime incident: `NearestNeighbors` function, 
-
-Merge the Street view id to the crime data set
-
-Visualization
+<figure><center>
+<img src="data/ppt/confidence_Interval.png" alt="drawing" width="600"/>
+<figcaption>Fig.10 - Confidence Interval for each component</figcaption>
+</center></figure>
 
 
-#### 6. Relationship Between Different Types of Crime and Street Space 
+#### 5. Relationship Between Different Types of Crime and Street Space 
 
 In order to further explore the relationship between different types of crime and street space, we have made a Parallel Map. In the plot, the x axis is the category of street elements, and the y axis is the proportion of street elements after standardization. Each line represents a crime record in Philadelphia in 2015, and its color is determined by the type of crime.
 
 <figure><center>
-<img src="data/ppt/10.png" alt="drawing" width="500"/>
-<figcaption>Fig.10 - Street Space and Different Types of Crime</figcaption>
+<img src="data/ppt/final.jpg" alt="drawing" width="700"/>
+<figcaption>Fig.11 - Street Space and Different Types of Crime</figcaption>
 </center></figure>
 
-We can know from the figure that the street space where different types of crimes occur is different.Similar to the previous results, some elements, such as greenery, sky are more closely related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation, it can be found that drug related violations usually occur in streets with less greenery, fewer people, and less infrastructure.
+
+
+We can know from the figure that the street space where different types of crimes occur is different. Similar to the previous results, some elements, such as greening, sky are more closely related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation (displayed in the diagram), it can be found that drug related violations usually occur in streets with less greenery, fewer people, and less infrastructure.
