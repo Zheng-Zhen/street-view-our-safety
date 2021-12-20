@@ -60,6 +60,7 @@ The images were taken by the Bing at 2015, and we wrapped each image every 100m.
 <figcaption>Fig.1 - Street View Collection Points</figcaption>
 </center></figure>
 
+
 <figure><center>
 <img src="data/ppt/streetview_example.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.2 - Sample of the Street View Collection Image</figcaption>
@@ -123,7 +124,7 @@ From the map, we can learn that for the greening, the street in the north-west a
 
 
 
-#### 2. Clustering for street quality
+#### 2. Clustering for street views
 
 ##### a. Clustering Analysis
 
@@ -133,7 +134,7 @@ Based on the above street element outcome, KMeans Clustering Method is used to f
 <img src="data/ppt/clustering.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.5 - Visualization of Clustering map</figcaption>
 </center></figure>
-Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the  administration unit division and community segregation. Adjacent streets will receive similar urban administration resource and attract similar population.
+Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the administration unit division and community segregation. Adjacent streets will receive similar urban administration resource and attract similar population.
 
 ##### b. Visualization & Result
 
@@ -147,6 +148,7 @@ We use bar diagram to display the quantitative difference between each category.
 
 
 Based on above quantitative diagram. We attach labels to these four categories, which may describe the feature of these clustering. The labels are as follow.
+
 **`1: High-density`** 
 
 This clustering mainly distributes at the center city which is the most prosperous area in Philadelphia, and it has more buildings, less green, and more openness (less wall and more road) compared to other areas.
