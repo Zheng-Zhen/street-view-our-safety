@@ -17,7 +17,7 @@ We are sorry that the bandwidth of the server is limited. Please be patient whil
 
 ## [Project WriteUp](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
 
-## [Project Proposal](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
+## [Project Proposal](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/proposal.md)
 
 
 ## Due dates
