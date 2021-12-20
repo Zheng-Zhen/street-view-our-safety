@@ -2,6 +2,14 @@
 
 
 
+## Project Website
+
+http://550.orifish.tech
+
+It may take a while to load the page and data, please be patient!
+
+
+
 ## Team
 
 Member: ZhaoZhen Xu, Xiong Zheng
@@ -13,18 +21,18 @@ Tutor: Nick Hand
 
 ## Project Description
 
-Streets are the backbone of a city structure. Street qualities (including greening, accesses to transportation, demography, building, and public service etc.. ) will greatly impact the safety and equity of the community living there. The project aims to proactively, using street view analysis, explore the relationships between "street space" and "safety" / "equity". We try to answer following questions in this project.
+Streets are the backbone of a city structure. Street qualities (including greening, accesses to transportation, demography, building, and public service etc. ) will greatly impact the safety and equity of the community living there. The project aims to proactively, using street view analysis, explore the relationships between "street space" and "safety" / "equity". We try to answer following questions in this project.
 1. How does the street space quantitatively vary within Philadelphia?
 2. Are there clustering for the street quality?
 3. What is the relationship between races and their associated living streets? Does it achieve equity and where does the difference exist?
-4. What is the relationship between crime occurrence and the quantity of living street components? 
+4. What is the relationship between crime occurrence and the quantity of living street elements? 
 5. For specific crime types, which environment is easier to be effected?
 
 
 
 ## Method & Results
 
-Compared to the traditional method which will use manually reported or collected datasets (e.g. 311 complaints dataset and house sales dataset). Our method is proactive because we do images analysis on the Street Views provided by the Internet company , whose images are evenly distributed within Philadelphia, preventing the effect of the broken window theory and optionally reported dataset. Broken window theory says people in different classes or communities in different condition will have various tendencies toward reporting and changing the situation.
+Compared to the traditional method which will use manually reported or collected datasets (e.g. 311 complaints dataset and house sales dataset). Our method is proactive because we do images analysis on the Street Views provided by the Internet company , whose images are evenly distributed within Philadelphia, preventing the effect of the broken window theory and optionally reported datasets. Broken window theory says people in different classes or communities in different condition will have various tendencies toward reporting and changing the situation.
 
 
 
@@ -83,7 +91,7 @@ We then count the pixel number of each segment (each color), and calculate the p
 
 <center>Table.1 - Counting the pixel number of each segment</center>
 
-Then, we combined the output components into ten categories (Green, Wall, Lives, Building, Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the analysis more concise and intuitive. 
+Then, we combined the output elements into ten categories (Green, Wall, Lives, Building, Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the analysis more concise and intuitive. 
 
 | Categories     | Components                                                                |
 | -------------- | ------------------------------------------------------------------------- |
@@ -107,7 +115,7 @@ Then, we combined the output components into ten categories (Green, Wall, Lives,
 We plot each category of street view point in the map of Philadelphia, using color to represents the proportion. The purple represents a low proportion and the yellow represents a high proportion. The technical platforms used here are leaflet (to make the map) and the html language (to make the interactive buttons). 
 
 <figure><center>
-<img src="data/ppt/component.jpeg" alt="drawing" width="500"/>
+<img src="data/ppt/component.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.4 - Visualization of Component Analysis Image</figcaption>
 </center></figure>
 
@@ -120,14 +128,13 @@ From the map, we can learn that for the greening, the street in the north-west a
 
 ##### a. Clustering Analysis
 
-Based on the above street component outcome, KMeans Clustering Method is used to find concise descriptions of these components. After attempts, we set the clustering number as four. 
+Based on the above street element outcome, KMeans Clustering Method is used to find concise descriptions of these elements. After attempts, we set the clustering number as four. 
 
 <figure><center>
 <img src="data/ppt/clustering.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.5 - Visualization of Clustering map</figcaption>
 </center></figure>
-
-Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
+Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the administration unit division and community segregation. Adjacent streets will receive similar urban administration resource and attract similar population.
 
 ##### b. Visualization & Result
 
@@ -135,8 +142,9 @@ We use bar diagram to display the quantitative difference between each category.
 
 <figure><center>
 <img src="data/ppt/clusteringDiagram.jpg" alt="drawing" width="800"/>
-<figcaption>Fig.5 - Visualization of Clustering Diagram</figcaption>
+<figcaption>Fig.6 - Visualization of Clustering Diagram</figcaption>
 </center></figure>
+
 
 
 Based on above quantitative diagram. We attach labels to these four categories, which may describe the feature of these clustering. The labels are as follow.
@@ -163,41 +171,40 @@ As this name, townhouse, indicates, the mainly building type within this cluster
 
 ##### a. Data Collection & Wrangling
 
-Aside from the component dataset obtained from the above procedure, a dataset of demography is collected. We use the ACS api `acs.query`to collect the demography data of 2015, and calculate the white population percentage of each census block group. Also, its corresponding geometry is obtained from `acs.set_mapservice`, and merged with the previous dataset.
-
-After this, we use `gpd.sjoin` to join the census white population percentage data with the street view dataset. In the end, a dataset with street component for all collection points and its related demography dataset is obtained.
+Aside from the element dataset obtained from the above procedure, a dataset of demography is collected. We use the ACS api `acs.query`to collect the demography data of 2015, and calculate the white population percentage of each census block group. Also, its corresponding geometry is obtained from `acs.set_mapservice`, and merged with the previous dataset. After this, we use `gpd.sjoin` to join the census white population percentage data with the street view dataset. In the end, a dataset with street element for all collection points and its related demography dataset is obtained.
 
 ##### b. Visualization & Result
 
-The race distribution is listed below. From the map, we can see the high-white-percentage community are mainly distributed at the north-west, north-east and south Philadelphia.
-
+The map of race distribution is listed below. From the map, we can see the high-white-percentage communities are mainly distributed at the north-west, north-east and south Philadelphia.
 <figure><center>
 <img src="data/ppt/raceDistribution.jpg" alt="drawing" width="500"/>
-<figcaption>Fig.6 - Visualization of Race Distribution map</figcaption>
+<figcaption>Fig.7 - Visualization of Race Distribution map</figcaption>
 </center></figure>
+
 
 Corresponding to the above map, an area chart is used to display the change of each street element with the percentage of white population increased. 
 
 <figure><center>
 <img src="data/ppt/elementWithRace.jpg" alt="drawing" width="700"/>
-<figcaption>Fig.7 - Visualization of White PPL % and Street Component</figcaption>
+<figcaption>Fig.8 - Visualization of White PPL % and Street Component</figcaption>
 </center></figure>
 
 
-From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percentage community.
+
+From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy more greening-and-open streets while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street element, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percentage community.
 
 #### 4. Relationship between Street Component & Crime
 
 ##### a. Data Collection & Wrangling
 
-Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01. And we also aggregate the occurring number by crime type to select the Top 20 for further analysis. The following is the bar plot of aggregated crime occurring number. 
+Aside from the element dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01. And we also aggregate the occurring number by crime type to select the Top 20 for further analysis. The following is the bar plot of aggregated crime occurring number. 
 
 <figure><center>
 <img src="data/ppt/crimeselection.png" alt="drawing" width="600"/>
 <figcaption>Fig.8 - Aggregated Crime Occurring Number</figcaption>
 </center></figure>
 
-After this, we count the incidents of selected crime types within the 100 meter buffer of each street view collection point, using the method of `buffer` and `gpd.sjoin`. In the end, we get a dataset which has each street component proportion and its aggregated crime count.
+After this, we count the incidents of selected crime types within the 100 meter buffer of each street view collection point, using the method of `buffer` and `gpd.sjoin`. In the end, we get a dataset which has each street element proportion and its aggregated crime count.
 
 ##### b. Regression and Visualization
 
@@ -206,7 +213,7 @@ After this, we count the incidents of selected crime types within the 100 meter 
 <figcaption>Fig.9 - Relationship between each street component and crime incident</figcaption>
 </center></figure>
 
-Altair scatter plot is used to present the correlation between each street component and crime incident. To further examine the relationship, we use the `sm.OLS` to run the regression, where the crime count is the dependent variable and the street components are the independent variables. This regression's aim is not to accurately predict the crime count, but to see the coefficient of each independent variable to the crime count. (Due to some confidence interval cross over "0", so even these `Building`, `Road`, and `Sidewald` variables have negative coefficient in the regression model, they display a positive relationship in the scatter plot)
+Altair scatter plot is used to present the correlation between each street element and crime incident. To further examine the relationship, we use the `sm.OLS` to run the regression, where the crime count is the dependent variable and the street elements are the independent variables. This regression's aim is not to accurately predict the crime count, but to see the coefficient of each independent variable to the crime count. (Due to some confidence interval cross over "0", even these `Building`, `Road`, and `Sidewald` variables have negative coefficient in the regression model, they display a positive relationship in the scatter plot)
 
 | Element        | Coefficient | Confidence Interval |
 | -------------- | ----------- | ------------------- |
@@ -244,3 +251,14 @@ In order to further explore the relationship between different types of crime an
 
 
 We can know from the figure that the street space where different types of crimes occur is different. Similar to the previous results, some elements, such as greening, sky are more closely related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation (displayed in the diagram), it can be found that drug related violations usually occur in streets with less greenery, fewer people, and less infrastructure.
+
+
+
+## Used Datasets
+
+| Dataset          | Description                                                  | Source                 |
+| ---------------- | ------------------------------------------------------------ | ---------------------- |
+| Bing Street View | 12000+ street view pics for Philadelphia                     | Bing Street View(2015) |
+| Street           | Street center line                                           | OpenDataPhilly         |
+| ACS 2015         | Race and demography in 2015                                  | Census Bureau          |
+| Crime Incidents  | Crime incidents from the Philadelphia Police Department in 2015 | OpenDataPhilly         |
