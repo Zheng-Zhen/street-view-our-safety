@@ -97,7 +97,8 @@
                 <p>We plot each category of street view point in the map of Philadelphia, using color to represents the
                     proportion of each category. The purple represents a low proportion and the yellow represents a high
                     proportion.
-                    Clusters can be observed from most categories, especially in lives, road and green. </p>
+                    <b> Clusters can be observed from most categories, especially in lives, road and green.</b>
+                </p>
                 <div class="border rounded p-2 mb-3">
                     <p class="text-muted mb-1 ms-2 mt-1">Categories of Segmentation Elements</p>
                     <div class="d-flex flex-wrap">
@@ -127,7 +128,6 @@
                     </div>
 
                 </div>
-
             </div>
         </div>
     </div>
@@ -141,9 +141,10 @@
             <div class="text-container">
                 <h1 class="mb-4"><span class="badge bg-secondary">3</span>&nbsp; Clustering</h1>
                 <p>Based on the street elements analysis outcome, KMeans Clustering Method is introduces to find concise
-                    descriptions of these components. After attempts, we set the clustering number as four.</p>
-                <p>Interestingly, even though we did not include the geometry feature when doing the clustering
-                    analysis, it still represents spatial clustering feature. This may because of the administration
+                    descriptions of these elements. After attempts, we set the clustering number as four.</p>
+                <p><b>Interestingly, even though we did not include the geometry feature when doing the clustering
+                        analysis, it still represents spatial clustering feature.</b> This may because of the
+                    administration
                     unit division and community segregation. Adjacent streets will receive similar urban administration
                     and attract similar population.</p>
                 <button type="button" class="btn btn-secondary map03-btn d-block mb-3" id="map03-1">Street View Point
@@ -174,7 +175,31 @@
 
                 </div>
                 <div class="w-100" id="chart-03" style="height: 250px;"></div>
+                Based on above quantitative diagram. We attach labels to these four categories, which may describe
+                the feature of these clustering. The labels are as follow.
 
+                <h5 style="color: #E55756;">1: High-density</h5>
+
+                This clustering mainly distributes at the center city which is the most prosperous area in Philadelphia,
+                and it has more buildings, less green, and more openness (less wall and more road) compared to other
+                areas.
+
+                <h5 style="color: #55A24A;">2: Lush</h5>
+
+                This clustering mainly distributes at the west and mid-north Philadelphia. The features of this
+                clustering are low building density, high street greening, and wide road.
+
+                <h5 style="color: #72B7B3;">3: Spacious</h5>
+
+                This clustering distributes around large natural parks. And besides this, it has relatively less
+                buildings. These two indicated that it is easier to see the sky in the street, which also validated by
+                the analysis. And also this category has more walls, less open to the public compared to other areas.
+
+                <h5 style="color: #F58518;">4: Townhouse</h5>
+
+                As this name, townhouse, indicates, the mainly building type within this clustering is townhouse.
+                Therefore, this clustering has more greening, which is mainly made up of private lawns and gardens of
+                townhouses, and less road.
             </div>
         </div>
     </div>
@@ -189,11 +214,16 @@
         </div>
         <div class="col-4 ps-0 pe-0">
             <div class="text-container" style="height: 100%;">
-                <h1 class="mb-4"><span class="badge bg-secondary">4</span> Street Views</h1>
-                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, at ducimus? Blanditiis excepturi
-                    qui eos explicabo aut magni amet laborum accusantium, maxime exercitationem ipsum earum esse culpa
-                    dolorum vitae asperiores, et rem ea doloribus sequi consectetur nostrum aliquid. Fuga facilis
-                    reiciendis cumque, eligendi tempore enim excepturi dolor quaerat quae et!</p>
+                <h1 class="mb-4"><span class="badge bg-secondary">4</span>&nbsp; Street Elements & Race</h1>
+                <p>From the plot, we can see that when the percentage of the white are at the mid-range, the street
+                    will have more buildings, lives, public service and transportation. That means <b>a mixed community
+                        will bring vitality to the street</b>, and we should encourage the confusion. However, we also
+                    see <b>the
+                        white-majority communities enjoy a more greening and open street while the other communities
+                        have
+                        less green, more wall, roads and transportation</b>. Since we only analyze the street elements,
+                    there
+                    are many other factors not being taken into account and we can not simply draw the conclusion. </p>
                 <div style="position: sticky;top:20px">
                     <!-- legend -->
                     <div class="border rounded p-3 pt-2 mb-3">

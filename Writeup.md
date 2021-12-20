@@ -52,6 +52,7 @@ The images were taken by the Bing at 2015, and we wrapped each image every 100m.
 <figcaption>Fig.1 - Street View Collection Points</figcaption>
 </center></figure>
 
+
 <figure><center>
 <img src="data/ppt/streetview_example.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.2 - Sample of the Street View Collection Image</figcaption>
@@ -109,12 +110,13 @@ We plot each category of street view point in the map of Philadelphia, using col
 <img src="data/ppt/component.jpeg" alt="drawing" width="500"/>
 <figcaption>Fig.4 - Visualization of Component Analysis Image</figcaption>
 </center></figure>
+
 From the map, we can learn that for the greening, the street in the north-west and north-east areas have a higher greening proportion. As for the wall, which may represent the defense level of a street, west and mid Philadelphia have higher proportions. For the active lives and buildings on the street, mid and south Philadelphia have higher proportions, which may be the outcome of the high dense population. And the Center City and south Philadelphia, which are main commercial areas of Philadelphia, have more sidewalks and cars on the street; while it is more easy to see the sky in the east-north Philadelphia.
 
 
 
 
-#### 2. Clustering for street quality
+#### 2. Clustering for street views
 
 ##### 1a. Clustering Analysis
 
@@ -124,7 +126,8 @@ Based on the above street component outcome, KMeans Clustering Method is used to
 <img src="data/ppt/clustering.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.5 - Visualization of Clustering map</figcaption>
 </center></figure>
-Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the  administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
+
+Interestingly, even though we did not include the geometry feature when doing the clustering analysis, it still represents spatial clustering feature. This may because of the administration unit division and community segregation. Adjacent streets will receive similar urban administration and attract similar population.
 
 ##### 1b. Visualization & Result
 
@@ -137,6 +140,7 @@ We use bar diagram to display the quantitative difference between each category.
 
 
 Based on above quantitative diagram. We attach labels to these four categories, which may describe the feature of these clustering. The labels are as follow.
+
 **`1: High-density`** 
 
 This clustering mainly distributes at the center city which is the most prosperous area in Philadelphia, and it has more buildings, less green, and more openness (less wall and more road) compared to other areas.
@@ -166,6 +170,7 @@ After this, we use `gpd.sjoin` to join the census white population percentage da
 ##### 1b. Visualization & Result
 
 The race distribution is listed below. From the map, we can see the high-white-percentage community are mainly distributed at the north-west, north-east and south Philadelphia.
+
 <figure><center>
 <img src="data/ppt/raceDistribution.jpg" alt="drawing" width="500"/>
 <figcaption>Fig.6 - Visualization of Race Distribution map</figcaption>

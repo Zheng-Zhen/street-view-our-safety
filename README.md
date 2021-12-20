@@ -13,6 +13,8 @@ ZhaoZhen Xu, Xiong Zheng
 
 ## [Project Website](http://550.orifish.tech/)
 
+We are sorry that the bandwidth of the server is limited. Please be patient while the webb is loading.
+
 ## [Project WriteUp](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
 
 ## [Project Proposal](https://github.com/MUSA-550-Fall-2021/final-project-urban-outliers/blob/main/Writeup.md)
