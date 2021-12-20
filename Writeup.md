@@ -178,25 +178,24 @@ Corresponding to the above map, an area chart is used to display the change of e
 <figcaption>Fig.7 - Visualization of White PPL % and Street Component</figcaption>
 </center></figure>
 
-From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percen
+From the graph, we can see that when the percentage of the white are at the mid-range, the street will have more buildings, lives, public service and transportation. That means a mixed community will bring vitality to the street, and we should encourage the confusion. However, we also see the mid-and-high-white communities enjoy a more greening and open street while the low-white communities have less green, more wall, roads and transportation. Since we only analyze the street component, there are many other factors not being taken into account and we can not simply draw the conclusion. But these indicator indicate there is difference for street quality among different white percentage community.
 
 #### 4. Relationship between Street Component & Crime
 
-##### 1a. Data Collection
+##### 1a. Data Collection & Wrangling
 
-Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01.
+Aside from the component dataset obtained from the above procedure, a dataset of crime incident is also collected. We use the api provided by the OpenDataPhilly to collect the crime incidents from 2015-01-01 to 2016-01-01. And we also aggregate the occurring number by crime type to select the Top 20 for further analysis. The following is the bar plot of aggregated crime occurring number. 
+
+<figure><center>
+<img src="data/ppt/crimeselection.png" alt="drawing" width="500"/>
+<figcaption>Fig.8 - Aggregated Crime Occurring Number</figcaption>
+</center></figure>
+After this, we count the incidents of selected crime types within the 100 meter buffer of each street view collection point, using the method of `buffer` and `gpd.sjoin`. In the end, we get a dataset which has each street component proportion and its aggregated crime count.
 
 
+##### 2b. Regression
 
-Select crime types: Select by the Top 20 of the aggregated count
 
-<img src="exploratory/writeup_img_repositpry/crimeselection.png" alt="drawing" width="500"/>
-
-Attach nearest street view point attributes to each crime incident: `NearestNeighbors` function, 
-
-Merge the Street view id to the crime data set
-
-Visualization
 
 
 #### 6. Relationship Between Different Types of Crime and Street Space 
