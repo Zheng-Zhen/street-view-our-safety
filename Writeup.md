@@ -198,3 +198,14 @@ Merge the Street view id to the crime data set
 
 Visualization
 
+
+#### 6. Relationship Between Different Types of Crime and Street Space 
+
+In order to further explore the relationship between different types of crime and street space, we have made a Parallel Map. In the plot, the x axis is the category of street elements, and the y axis is the proportion of street elements after standardization. Each line represents a crime record in Philadelphia in 2015, and its color is determined by the type of crime.
+
+<figure><center>
+<img src="data/ppt/10.png" alt="drawing" width="500"/>
+<figcaption>Fig.10 - Street Space and Different Types of Crime</figcaption>
+</center></figure>
+
+We can know from the figure that the street space where different types of crimes occur is different.Similar to the previous results, some elements, such as greenery, sky are more closely related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation, it can be found that drug related violations usually occur in streets with less greenery, fewer people, and less infrastructure.
