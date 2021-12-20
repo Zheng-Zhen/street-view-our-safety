@@ -190,14 +190,17 @@ $.getJSON('data/p3-clustering-polygon.geojson', function (geojson) {
 
 $(".map03-btn").on('click', function () {
     let t = $(this).attr("id");
-    console.log(t)
     renderMap03(t);
+    // change the legend
+    $('.legend-p3').toggleClass('legend-p3-circle');
 })
 
 // ======= map04 ======
 var map04 = L.map('map04').setView([39.9597471840457, -75.17893127441406], 14)
 basemap04.addTo(map04);
 
-// ======= map05 ======
-var map05 = L.map('map05').setView([39.9597471840457, -75.17893127441406], 14)
-basemap05.addTo(map05);
+// ======= page05 ======
+var chart05_conf = "data/p5-SV-Crime-chart.json";
+vegaEmbed('#chart-05', chart05_conf).then(function (result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+}).catch(console.error);

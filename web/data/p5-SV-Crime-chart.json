@@ -1,0 +1,126 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+    "config": {
+        "view": {
+            "continuousHeight": 300,
+            "continuousWidth": 400,
+            "strokeWidth": 0
+        },
+        "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "title": null,
+            "columns": 7
+        }
+    },
+    "width": "container",
+    "height": "container",
+    "data": {
+        "format": {
+            "type": "json"
+        },
+        "url": "data/p5-SV-Crime-data.json"
+    },
+    "encoding": {
+        "color": {
+            "condition": {
+                "field": "crimeType",
+                "scale": {
+                    "scheme": "category20b"
+                },
+                "selection": "selector001",
+                "type": "nominal"
+            },
+            "value": "lightgray"
+        },
+        "detail": {
+            "field": "index",
+            "type": "nominal"
+        },
+        "opacity": {
+            "condition": {
+                "selection": "selector001",
+                "value": 1
+            },
+            "value": 0.07
+        },
+        "x": {
+            "axis": {
+                "domain": false,
+                "labelAngle": 0,
+                "ticks": false
+            },
+            "field": "key",
+            "title": "Street Component",
+            "type": "nominal"
+        },
+        "y": {
+            "axis": {
+                "domain": false,
+                "ticks": false
+            },
+            "field": "minmax_value",
+            "title": "Normalized porportion",
+            "type": "quantitative"
+        }
+    },
+    "mark": {
+        "size": 0.5,
+        "type": "line"
+    },
+    "selection": {
+        "selector001": {
+            "bind": "legend",
+            "fields": [
+                "crimeType"
+            ],
+            "type": "multi"
+        }
+    },
+    "title": "Relationship between street component and crime type",
+    "transform": [
+        {
+            "window": [
+                {
+                    "as": "index",
+                    "op": "count"
+                }
+            ]
+        },
+        {
+            "fold": [
+                "All",
+                "wall",
+                "lives",
+                "building",
+                "infrastructure",
+                "road",
+                "sidewalk",
+                "sky",
+                "green",
+                "transportation"
+            ]
+        },
+        {
+            "groupby": [
+                "key"
+            ],
+            "joinaggregate": [
+                {
+                    "as": "min",
+                    "field": "value",
+                    "op": "min"
+                },
+                {
+                    "as": "max",
+                    "field": "value",
+                    "op": "max"
+                }
+            ]
+        },
+        {
+            "as": "minmax_value",
+            "calculate": "((datum.value - datum.min) / (datum.max - datum.min))"
+        }
+    ]
+}
