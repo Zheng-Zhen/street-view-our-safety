@@ -31,7 +31,7 @@
                 "selection": "selector001",
                 "type": "nominal"
             },
-            "value": "lightgray"
+            "value": "#cccccc66"
         },
         "detail": {
             "field": "index",
@@ -51,7 +51,7 @@
                 "ticks": false
             },
             "field": "key",
-            "title": "Street Component",
+            "title": "Street Elements",
             "type": "nominal"
         },
         "y": {
@@ -77,7 +77,7 @@
             "type": "multi"
         }
     },
-    "title": "Relationship between street component and crime type",
+    "title": "Relationship between street elements and crime type",
     "transform": [
         {
             "window": [

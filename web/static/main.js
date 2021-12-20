@@ -111,7 +111,7 @@ let renderMap02 = function (layerId) {
         },
         onEachFeature: function (feature, layer) {
             layer.bindPopup(
-                generatePopup("Segment Component", layerName) +
+                generatePopup("Segment Elements", layerName) +
                 generatePopup("Percentage", (feature.properties[layerName] * 100).toFixed(2) + "%")
             );
         }

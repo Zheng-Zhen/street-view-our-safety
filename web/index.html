@@ -53,10 +53,29 @@
                     100m(328ft). And street view images are collected according to these points throuth <a
                         href="https://www.microsoft.com/en-us/maps/choose-your-bing-maps-api">Bing
                         Map Api</a>. </p>
-                <h2>How did we collect the elements in these images?</h2>
+                <h2>How did we quantify the elements in these images?</h2>
                 <p>An Image Segmentation method <a href="">SegNet</a> is used to analyzing the elements and their
                     proportion in the images. The elements in the images are devided into different classes, like trees,
                     roads, cars or sidewalks.</p>
+                <h2>Questions we are going to explore</h2>
+                <ol>
+                    <li>
+                        How does the street space quantitatively vary within Philadelphia?
+                    </li>
+                    <li>
+                        Are there clustering for the street spaces?
+                    </li>
+                    <li>
+                        What is the relationship between races and their associated living streets? Does it achieve
+                        equity and where does the difference exist?
+                    </li>
+                    <li>
+                        What is the relationship between crime occurrence and the quantity of living street elements?
+                    </li>
+                    <li>
+                        For specific crime types, which environment is easier to be effected?
+                    </li>
+                </ol>
             </div>
         </div>
     </div>
@@ -68,18 +87,19 @@
         </div>
         <div class="col-4 ps-0 pe-0">
             <div class="text-container">
-                <h1 class="mb-4"><span class="badge bg-secondary">2</span>&nbsp; Component Pcts</h1>
-                <p>Component Percentages of Street views</p>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Et enim id magnam, iure ratione
-                    consequuntur voluptatibus libero quae iusto mollitia corrupti debitis asperiores corporis voluptatum
-                    minus hic modi autem? Accusamus placeat dolorem doloribus quisquam! Non a odio eaque tempora ratione
-                    molestias dolore? Delectus omnis quisquam possimus aut quo quam cumque sint voluptas consequuntur
-                    itaque excepturi unde harum, nam necessitatibus explicabo ea fugiat veniam sit odio assumenda
-                    suscipit. Quibusdam maiores quidem nemo vero. Ullam blanditiis doloremque, dolores qui cumque saepe
-                    quasi, itaque fugiat perspiciatis doloribus soluta impedit illum exercitationem iure maiores fuga
-                    hic labore inventore deleniti dolorum consequuntur totam quas. Exercitationem.</p>
+                <h1 class="mb-4" style="font-size:2em"><span class="badge bg-secondary">2</span>&nbsp;
+                    Distribution of Elements</h1>
+                <p>We first count the pixel number of each segment (each color), and calculate the proportion of
+                    each segment by dividing the total pixel number of them.</p>
+                <p>Then, we combined the output elements into ten categories (Green, Wall, Lives, Building,
+                    Infrastructure, Road, Sidewalk, Sky, Transportation, and Public service), which will make the
+                    analysis more concise and intuitive.</p>
+                <p>We plot each category of street view point in the map of Philadelphia, using color to represents the
+                    proportion of each category. The purple represents a low proportion and the yellow represents a high
+                    proportion.
+                    Clusters can be observed from most categories, especially in lives, road and green. </p>
                 <div class="border rounded p-2 mb-3">
-                    <p class="text-muted mb-1 ms-2 mt-1">Categories of Segmentation Components</p>
+                    <p class="text-muted mb-1 ms-2 mt-1">Categories of Segmentation Elements</p>
                     <div class="d-flex flex-wrap">
                         <button type="button" class="btn btn-secondary map02-btn">green</button>
                         <button type="button" class="btn btn-secondary map02-btn">wall</button>
@@ -120,14 +140,12 @@
         <div class="col-4 ps-0 pe-0">
             <div class="text-container">
                 <h1 class="mb-4"><span class="badge bg-secondary">3</span>&nbsp; Clustering</h1>
-                <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis assumenda earum dolorum vero quasi
-                    similique nulla ex inventore omnis dolor ratione vitae amet, iste velit modi tempore hic saepe, fuga
-                    esse totam! Pariatur alias, beatae quibusdam nesciunt eum commodi minus, maiores eius suscipit
-                    consequuntur quis ab asperiores sapiente? Quis voluptate sed consequatur. Dolorem, beatae?
-                    Reprehenderit atque nostrum maiores placeat, optio voluptatem magnam. Sapiente consectetur iure
-                    ipsam? Rem nisi facilis aliquam architecto aperiam perferendis, magnam laboriosam officia deleniti
-                    ea quia aut similique perspiciatis officiis debitis in quo obcaecati maiores inventore vitae unde,
-                    aspernatur culpa! Commodi neque veniam et, nostrum eveniet reiciendis.</p>
+                <p>Based on the street elements analysis outcome, KMeans Clustering Method is introduces to find concise
+                    descriptions of these components. After attempts, we set the clustering number as four.</p>
+                <p>Interestingly, even though we did not include the geometry feature when doing the clustering
+                    analysis, it still represents spatial clustering feature. This may because of the administration
+                    unit division and community segregation. Adjacent streets will receive similar urban administration
+                    and attract similar population.</p>
                 <button type="button" class="btn btn-secondary map03-btn d-block mb-3" id="map03-1">Street View Point
                     Clustering</button>
                 <button type="button" class="btn btn-secondary map03-btn d-block mb-3" id="map03-2">Aggregated Lable by
@@ -238,18 +256,18 @@
                         </div>
 
                     </div>
-                    <!-- crime map -->
+                    <!-- Race map -->
                     <div class="border rounded pt-2 mb-3">
-                        <p class="text-muted mb-2 ms-3">Crime Map</p>
+                        <p class="text-muted mb-2 ms-3">Race Map</p>
                         <div id="map-35" style="height:40vh;"></div>
                         <div class="col legend-col">
                             <div class="d-inline ms-3 me-3">
                                 <div class="legend" style="background-color: #440154aa; border: 3px #440154 solid">
-                                </div> Low Crime
+                                </div> Hight percentage of ethnic minorities
                             </div>
-                            <div class="d-inline">
+                            <div class="ms-3 me-3">
                                 <div class="legend" style="background-color: #FEE826aa; border: 3px #FEE826 solid">
-                                </div> High Crime
+                                </div> Low percentage of ethnic minorities
                             </div>
                         </div>
                     </div>
@@ -270,14 +288,16 @@
         <div class="col-4 ps-0 pe-0">
             <div class="text-container">
                 <h1 class="mb-4"><span class="badge bg-secondary">5</span> Street Views</h1>
-                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam similique necessitatibus qui sed aut
-                    eveniet, nulla maiores laborum. Iure molestiae earum repellendus beatae dolorem similique. Non culpa
-                    architecto repudiandae provident eaque beatae doloremque enim repellat sit perspiciatis repellendus
-                    minus, voluptas dicta earum expedita hic ullam nemo molestiae at. Accusantium, nulla nemo facilis
-                    mollitia illum voluptatum laborum culpa officiis, deleniti similique odio fugiat magni placeat
-                    obcaecati laboriosam? Dolore ipsam incidunt illum voluptates repudiandae corrupti iure ex
-                    consequatur accusantium architecto qui dolor aut, odit tempore nesciunt iste rerum earum labore eos
-                    aspernatur ratione tempora expedita dolores voluptatum! Distinctio quo deleniti voluptatem a.</p>
+                <p>In order to further explore the relationship between different types of crime and street space, we
+                    have made a Parallel Map. In the plot, the x axis is the category of street elements, and the y axis
+                    is the proportion of street elements after standardization. Each line represents a crime record in
+                    Philadelphia in 2015, and its color is determined by the type of crime.
+                </p>
+                <p> We can know from the figure that the street space where different types of crimes occur is
+                    different.Similar to the previous results, some elements, such as greenery, sky are more closely
+                    related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation, it
+                    can be found that drug related violations usually occur in streets with less greenery, fewer people,
+                    and less infrastructure.</p>
             </div>
         </div>
     </div>
@@ -286,16 +306,22 @@
 
 
         <div class="text-container">
-            <h1 class="mb-0"><span class="badge bg-secondary">6</span> Street Views</h1>
+            <h1 class="mb-5"><span class="badge bg-secondary">6</span>&nbsp; Street Views</h1>
+            <p>In order to further explore the relationship between different types of crime and street space, we
+                have made a Parallel Map. In the plot, the x axis is the category of street elements, and the y axis
+                is the proportion of street elements after standardization. Each line represents a crime record in
+                Philadelphia in 2015, and its color is determined by the type of crime.
+            </p>
+            <p> We can know from the figure that <b>the street space where different types of crimes occur is
+                    different. </b> Similar to the previous results, some elements, such as greenery, sky are more
+                closely
+                related to crime types. For example, comparing Aggravated Assault Firearm and Drug Law Violation, it
+                can be found that drug related violations usually occur in streets with less greenery, fewer people,
+                and less infrastructure.</p>
+            <p><b>You can click on the legends to see the one type of crime individually.</b></p>
         </div>
 
-        <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id excepturi provident delectus sequi numquam,
-            ducimus quod veritatis. Assumenda ea distinctio accusamus officia dicta rem optio a cupiditate, commodi at
-            voluptatibus culpa quod impedit soluta laudantium delectus animi iure debitis illo hic quo. In eligendi qui
-            hic aspernatur ratione ex. Eaque aliquam accusamus totam veniam distinctio rerum non pariatur quod quo iure
-            doloremque vero, perspiciatis voluptatum voluptates sapiente architecto deserunt tempore in et labore fugit
-            sunt recusandae. Saepe sit ratione atque adipisci minima illo ipsam odit pariatur cum sint esse, eaque,
-            commodi excepturi molestias! Adipisci, repellat nostrum quibusdam velit ad harum.</p>
+        <p></p>
 
         <div class="col-12" id="chart-05">
 
