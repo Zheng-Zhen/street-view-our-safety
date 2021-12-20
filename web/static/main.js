@@ -191,6 +191,10 @@ $(".map03-btn").on('click', function () {
     $('.map03-legend div .legend').toggleClass('circle');
 })
 
+var chart03_conf = "data/p3-clustering-bar-chart.json";
+vegaEmbed('#chart-03', chart03_conf, { "actions": false }).then(function (result) {
+}).catch(console.error);
+
 // ======= map3.5 ======
 var map04 = L.map('map-35', { scrollWheelZoom: false }).setView([39.9698, -75.1791], 11)
 basemap04.addTo(map04);

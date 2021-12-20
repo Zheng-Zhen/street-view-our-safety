@@ -1,0 +1,64 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v4.8.1.json",
+    "config": {
+        "view": {
+            "continuousHeight": 300,
+            "continuousWidth": 400
+        },
+        "legend": {
+            "orient": "bottom",
+            "direction": "horizontal",
+            "columns": 4
+        }
+    },
+    "data": {
+        "format": {
+            "type": "json"
+        },
+        "url": "data/p3-clustering-bar-data.json"
+    },
+    "encoding": {
+        "color": {
+            "field": "category",
+            "scale": {
+                "scheme": "tableau20"
+            },
+            "type": "nominal"
+        },
+        "tooltip": [
+            {
+                "field": "label",
+                "title": "Clustering Label",
+                "type": "nominal"
+            },
+            {
+                "field": "category",
+                "title": "Catagory",
+                "type": "nominal"
+            },
+            {
+                "field": "pct",
+                "format": ",.2f",
+                "title": "Percentage",
+                "type": "quantitative"
+            }
+        ],
+        "x": {
+            "field": "pct",
+            "stack": "normalize",
+            "title": "Category Percentage in Street View",
+            "type": "quantitative"
+        },
+        "y": {
+            "field": "label",
+            "title": "",
+            "type": "nominal",
+            "axis": {
+                "orient": "right"
+            }
+        }
+    },
+    "height": "container",
+    "mark": "bar",
+    "width": "container"
+}
