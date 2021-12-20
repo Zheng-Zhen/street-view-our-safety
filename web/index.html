@@ -18,8 +18,13 @@
 
 <body>
     <!-- front page -->
-    <div class="web-bg vh-100 d-flex">
-        <h1 class="web-title d-flex align-items-center w-100 justify-content-around shadow">How does streets affect
+
+    <div class="web-bg vh-100">
+    </div>
+
+
+    <div class="title-container d-flex vh-0">
+        <h1 class="web-title d-flex align-items-center w-100 justify-content-around">How does streets affect
             our safety?</h1>
     </div>
 
@@ -73,7 +78,7 @@
                     suscipit. Quibusdam maiores quidem nemo vero. Ullam blanditiis doloremque, dolores qui cumque saepe
                     quasi, itaque fugiat perspiciatis doloribus soluta impedit illum exercitationem iure maiores fuga
                     hic labore inventore deleniti dolorum consequuntur totam quas. Exercitationem.</p>
-                <div class="border rounded p-2">
+                <div class="border rounded p-2 mb-3">
                     <p class="text-muted mb-1 ms-2 mt-1">Segmentation Categories</p>
                     <div class="d-flex flex-wrap">
                         <button type="button" class="btn btn-secondary map02-btn">green</button>
@@ -87,6 +92,20 @@
                         <button type="button" class="btn btn-secondary map02-btn">transportation</button>
                         <button type="button" class="btn btn-secondary map02-btn">publicservice</button>
                     </div>
+                </div>
+                <div class="border rounded p-3 pt-2">
+                    <p class="text-muted mb-2">Legend</p>
+                    <div class="col">
+                        <div>
+                            <div class="legend circle" style="background-color: #44015466; border: 3px #440154 solid">
+                            </div> LOW percentage of <b class="map02-text">green</b> in street view pictures
+                        </div>
+                        <div>
+                            <div class="legend circle " style="background-color: #FEE82666; border: 3px #FEE826 solid">
+                            </div> HIGH percentage of <b class="map02-text">green</b> in street view pictures
+                        </div>
+                    </div>
+
                 </div>
 
             </div>
@@ -116,25 +135,21 @@
                     Group</button>
                 <div class="border rounded p-3 pt-2">
                     <p class="text-muted mb-2">Legend</p>
-                    <div class="col">
+                    <div class="col map03-legend">
                         <div>
-                            <div class="legend-p3 legend-p3-circle"
-                                style="background-color: #E5575666; border: 3px #E55756 solid">
+                            <div class="legend circle" style="background-color: #E5575666; border: 3px #E55756 solid">
                             </div> High-density Street View
                         </div>
                         <div>
-                            <div class="legend-p3 legend-p3-circle "
-                                style="background-color: #F5851866; border: 3px #F58518 solid">
+                            <div class="legend circle " style="background-color: #F5851866; border: 3px #F58518 solid">
                             </div> Townhouse Street View
                         </div>
                         <div>
-                            <div class="legend-p3 legend-p3-circle "
-                                style="background-color: #72B7B366; border: 3px #72B7B3 solid">
+                            <div class="legend circle " style="background-color: #72B7B366; border: 3px #72B7B3 solid">
                             </div> Lush Street View
                         </div>
                         <div>
-                            <div class="legend-p3 legend-p3-circle "
-                                style="background-color: #55A24A66; border: 3px #55A24A solid">
+                            <div class="legend circle " style="background-color: #55A24A66; border: 3px #55A24A solid">
                             </div> Spacious Street View
                         </div>
                     </div>
@@ -145,15 +160,123 @@
         </div>
     </div>
     </div>
+    <!-- 3.5 page -->
+    <div class="page row m-0">
+        <div class="col-8 border">
 
-    <!-- fourth page -->
-    <div class="page row  m-0">
-        <div class="col-8 sticky-map" id="map04">
+            <div class="" id="chart-35"></div>
+
 
         </div>
         <div class="col-4 ps-0 pe-0">
-            <div class="text-container">
+            <div class="text-container" style="height: 100%;">
                 <h1 class="mb-4"><span class="badge bg-secondary">4</span> Street Views</h1>
+                <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime, at ducimus? Blanditiis excepturi
+                    qui eos explicabo aut magni amet laborum accusantium, maxime exercitationem ipsum earum esse culpa
+                    dolorum vitae asperiores, et rem ea doloribus sequi consectetur nostrum aliquid. Fuga facilis
+                    reiciendis cumque, eligendi tempore enim excepturi dolor quaerat quae et!</p>
+                <div style="position: sticky;top:20px">
+                    <!-- legend -->
+                    <div class="border rounded p-3 pt-2 mb-3">
+                        <p class="text-muted mb-2">Legend</p>
+                        <div class="row">
+                            <div class="col legend-col">
+                                <div>
+                                    <div class="legend circle"
+                                        style="background-color: #8889AFaa; border: 3px #8889AF solid">
+                                    </div> High-density Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #9798C8aa; border: 3px #9798C8 solid">
+                                    </div> Townhouse Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #A6A8E2aa; border: 3px #A6A8E2 solid">
+                                    </div> Lush Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #C3C5EBaa; border: 3px #C3C5EBaa solid">
+                                    </div> Spacious Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #BAA783aa; border: 3px #BAA783 solid">
+                                    </div> Spacious Street View
+                                </div>
+                            </div>
+                            <div class="col legend-col">
+                                <div>
+                                    <div class="legend circle"
+                                        style="background-color: #A2AE88aa; border: 3px #A2AE88 solid">
+                                    </div> High-density Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #B9C797aa; border: 3px #B9C797 solid">
+                                    </div> Townhouse Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #D3E1A6aa; border: 3px #D3E1A6 solid">
+                                    </div> Lush Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #E2E9C3aa; border: 3px #E2E9C3 solid">
+                                    </div> Spacious Street View
+                                </div>
+                                <div>
+                                    <div class="legend circle "
+                                        style="background-color: #D7C588aa; border: 3px #D7C588 solid">
+                                    </div> Spacious Street View
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <!-- crime map -->
+                    <div class="border rounded pt-2 mb-3">
+                        <p class="text-muted mb-2 ms-3">Crime Map</p>
+                        <div id="map-35" style="height:40vh;"></div>
+                        <div class="col legend-col">
+                            <div class="d-inline ms-3 me-3">
+                                <div class="legend" style="background-color: #440154aa; border: 3px #440154 solid">
+                                </div> Low Crime
+                            </div>
+                            <div class="d-inline">
+                                <div class="legend" style="background-color: #FEE826aa; border: 3px #FEE826 solid">
+                                </div> High Crime
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- fourth page -->
+    <div class="page row m-0">
+        <div class="col-8 sticky-map">
+            <div style="overflow: scroll;">
+                <div id="chart04-1"></div>
+            </div>
+            <div id="chart04-2"></div>
+        </div>
+        <div class="col-4 ps-0 pe-0">
+            <div class="text-container">
+                <h1 class="mb-4"><span class="badge bg-secondary">5</span> Street Views</h1>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Veniam similique necessitatibus qui sed aut
+                    eveniet, nulla maiores laborum. Iure molestiae earum repellendus beatae dolorem similique. Non culpa
+                    architecto repudiandae provident eaque beatae doloremque enim repellat sit perspiciatis repellendus
+                    minus, voluptas dicta earum expedita hic ullam nemo molestiae at. Accusantium, nulla nemo facilis
+                    mollitia illum voluptatum laborum culpa officiis, deleniti similique odio fugiat magni placeat
+                    obcaecati laboriosam? Dolore ipsam incidunt illum voluptates repudiandae corrupti iure ex
+                    consequatur accusantium architecto qui dolor aut, odit tempore nesciunt iste rerum earum labore eos
+                    aspernatur ratione tempora expedita dolores voluptatum! Distinctio quo deleniti voluptatem a.</p>
             </div>
         </div>
     </div>
@@ -162,7 +285,7 @@
 
 
         <div class="text-container">
-            <h1 class="mb-0"><span class="badge bg-secondary">5</span> Street Views</h1>
+            <h1 class="mb-0"><span class="badge bg-secondary">6</span> Street Views</h1>
         </div>
 
         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Id excepturi provident delectus sequi numquam,
